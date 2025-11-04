@@ -47,11 +47,11 @@ const ScheduleSection = () => {
     <section className="relative py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-5xl font-bold mb-4">
-            <span className="text-gradient">Schedule</span>
+          <h2 className="text-5xl font-western mb-4" style={{ textShadow: 'var(--shadow-text)' }}>
+            <span className="text-gradient">Trail Schedule</span>
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Your guide to an amazing weekend of hacking
+          <p className="text-xl text-muted-foreground font-body">
+            Your guide to a wild weekend on the frontier
           </p>
         </div>
 
@@ -62,9 +62,9 @@ const ScheduleSection = () => {
               className="bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/30 transition-all duration-300"
             >
               <CardContent className="p-6">
-                <div className="flex items-center gap-2 mb-6 pb-4 border-b border-border">
+                <div className="flex items-center gap-2 mb-6 pb-4 border-b-2 border-primary/30">
                   <Calendar className="w-5 h-5 text-primary" />
-                  <h3 className="text-2xl font-bold">{day.day}</h3>
+                  <h3 className="text-2xl font-body font-bold">{day.day}</h3>
                 </div>
 
                 <div className="space-y-4">
@@ -76,8 +76,8 @@ const ScheduleSection = () => {
                       <div className="flex items-start gap-3">
                         <Clock className="w-4 h-4 mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-sm">{event.time}</p>
-                          <p className="font-medium">{event.title}</p>
+                          <p className="font-body font-semibold text-sm">{event.time}</p>
+                          <p className="font-body font-medium">{event.title}</p>
                         </div>
                       </div>
                     </div>
@@ -89,8 +89,8 @@ const ScheduleSection = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-muted-foreground">
-            * Schedule is subject to change. Stay tuned for updates!
+          <p className="text-muted-foreground font-body">
+            * Schedule may shift like desert sands. Stay tuned for updates, partner!
           </p>
         </div>
       </div>

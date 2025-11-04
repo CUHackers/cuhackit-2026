@@ -15,11 +15,11 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-4 relative z-10 text-center">
         <div className="animate-fade-in">
-          <h1 className="text-6xl md:text-8xl font-bold mb-6">
+          <h1 className="text-6xl md:text-8xl font-western mb-6" style={{ textShadow: 'var(--shadow-text)' }}>
             <span className="text-gradient">CUhackit '26</span>
           </h1>
-          <p className="text-2xl md:text-3xl text-foreground/90 mb-8 font-light">
-            Where Innovation Meets Creativity
+          <p className="text-2xl md:text-3xl text-foreground/90 mb-8 font-body font-bold" style={{ textShadow: 'var(--shadow-text)' }}>
+            Saddle Up for Innovation
           </p>
           
           <div className="flex flex-wrap justify-center gap-6 mb-12 text-lg">
@@ -40,16 +40,16 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
+              className="text-lg px-8 py-6 font-body font-bold bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 hover:scale-105 border-2 border-primary/30"
             >
-              Register Now
+              Join the Posse
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="text-lg px-8 py-6 border-primary/50 hover:bg-primary/10 transition-all duration-300 hover:scale-105"
+              className="text-lg px-8 py-6 font-body font-bold border-2 border-primary hover:bg-primary/20 transition-all duration-300 hover:scale-105"
             >
-              Learn More
+              Scout the Territory
             </Button>
           </div>
         </div>

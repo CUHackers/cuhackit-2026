@@ -45,11 +45,11 @@ const FAQSection = () => {
     <section className="relative py-24">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-5xl font-bold mb-4">
-            <span className="text-gradient">FAQ</span>
+          <h2 className="text-5xl font-western mb-4" style={{ textShadow: 'var(--shadow-text)' }}>
+            <span className="text-gradient">Trail Guide</span>
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Got questions? We've got answers!
+          <p className="text-xl text-muted-foreground font-body">
+            Got questions? We've got answers, partner!
           </p>
         </div>
 
@@ -61,9 +61,9 @@ const FAQSection = () => {
               className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-lg px-6 hover:border-primary/50 transition-colors"
             >
               <AccordionTrigger className="text-left hover:text-primary transition-colors">
-                <span className="font-semibold">{faq.question}</span>
+                <span className="font-body font-bold">{faq.question}</span>
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
+              <AccordionContent className="text-muted-foreground font-body">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
@@ -71,11 +71,11 @@ const FAQSection = () => {
         </Accordion>
 
         <div className="mt-12 text-center">
-          <p className="text-muted-foreground mb-4">
-            Still have questions?
+          <p className="text-muted-foreground font-body mb-4">
+            Still got questions, partner?
           </p>
-          <button className="px-6 py-3 bg-gradient-to-r from-primary to-accent rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 hover:scale-105">
-            Contact Us
+          <button className="px-6 py-3 bg-gradient-to-r from-primary to-accent rounded-lg font-body font-bold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 hover:scale-105 border-2 border-primary/30">
+            Holler at Us
           </button>
         </div>
       </div>

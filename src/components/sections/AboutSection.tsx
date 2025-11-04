@@ -41,12 +41,12 @@ const AboutSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-5xl font-bold mb-4">
-            What is <span className="text-gradient">CUhackit</span>?
+          <h2 className="text-5xl font-western mb-4" style={{ textShadow: 'var(--shadow-text)' }}>
+            About the <span className="text-gradient">Roundup</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Clemson University's premier hackathon bringing together the brightest minds to innovate, 
-            collaborate, and create solutions for tomorrow's challenges.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-body">
+            CUhackit is Clemson's wildest hackathon rodeo, wranglin' the brightest code slingers to 
+            blaze new trails in innovation and create solutions for tomorrow's frontier.
           </p>
         </div>
 
@@ -59,19 +59,19 @@ const AboutSection = () => {
             >
               <CardContent className="p-6 text-center">
                 <feature.icon className={`w-12 h-12 mx-auto mb-4 ${feature.color}`} />
-                <h3 className="text-2xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+                <h3 className="text-2xl font-body font-bold mb-2">{feature.title}</h3>
+                <p className="text-muted-foreground font-body">{feature.description}</p>
               </CardContent>
             </Card>
           ))}
         </div>
 
         <div className="mt-16 text-center max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 border border-primary/20">
-            <p className="text-lg leading-relaxed">
-              Whether you're a seasoned developer or writing your first line of code, CUhackit '26 is your 
-              opportunity to learn, build, and showcase your skills. Join us for an unforgettable weekend of 
-              innovation, free food, and amazing experiences!
+          <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 border-2 border-primary/30">
+            <p className="text-lg leading-relaxed font-body">
+              Whether you're a seasoned gunslinger or writin' your first line of code, CUhackit '26 is your 
+              chance to learn, build, and stake your claim. Join us for an unforgettable weekend of 
+              innovation, grub, and frontier adventures!
             </p>
           </div>
         </div>
