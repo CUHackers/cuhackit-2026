@@ -4,19 +4,29 @@ import { Calendar, MapPin, Users } from 'lucide-react';
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/50 to-background z-0" />
-      
+      {/* Background image (TitleBackground.svg) - center and fill the screen */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          // Place the SVG on top and a vertical two-color background beneath it.
+          // Top and bottom are solid colors with an abrupt split at 50% (no gradient blending)
+          backgroundImage: "url('/assets/TitleBackground.svg'), linear-gradient(to bottom, #a8c2ff 0%, #a8c2ff 50%, #be732a 50%, #be732a 100%)",
+          backgroundPosition: 'center center, center center',
+          backgroundSize: 'cover, cover',
+          backgroundRepeat: 'no-repeat, no-repeat',
+        }}
+      />
+
       {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden z-0">
+  <div className="absolute inset-0 overflow-hidden z-10">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10 text-center">
+  <div className="container mx-auto px-4 relative z-20 text-center">
         <div className="animate-fade-in">
-          <h1 className="text-6xl md:text-8xl font-western mb-6" style={{ textShadow: 'var(--shadow-text)' }}>
-            <span className="text-gradient">CUhackit '26</span>
+          <h1 className="text-6xl md:text-8xl font-western mb-6" style={{ textShadow: 'var(--shadow-text)', }}>
+            <span style={{ color: '#153012' }}>CUhackit '26</span>
           </h1>
           <p className="text-2xl md:text-3xl text-foreground/90 mb-8 font-body font-bold" style={{ textShadow: 'var(--shadow-text)' }}>
             Saddle Up for Innovation
@@ -54,12 +64,6 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-primary/50 rounded-full flex justify-center p-1">
-            <div className="w-1.5 h-3 bg-primary rounded-full animate-glow-pulse" />
-          </div>
-        </div>
       </div>
     </section>
   );
