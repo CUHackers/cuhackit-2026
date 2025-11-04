@@ -1,13 +1,37 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState, useEffect } from 'react';
+import SaloonDoors from '@/components/SaloonDoors';
+import HeroSection from '@/components/sections/HeroSection';
+import AboutSection from '@/components/sections/AboutSection';
+import ScheduleSection from '@/components/sections/ScheduleSection';
+import SponsorsSection from '@/components/sections/SponsorsSection';
+import FAQSection from '@/components/sections/FAQSection';
+import FooterSection from '@/components/sections/FooterSection';
 
 const Index = () => {
+  const [showDoors, setShowDoors] = useState(true);
+
+  useEffect(() => {
+    // Remove doors from DOM after animation completes
+    const timer = setTimeout(() => {
+      setShowDoors(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <>
+      {showDoors && <SaloonDoors />}
+      
+      <div className="min-h-screen bg-background">
+        <HeroSection />
+        <AboutSection />
+        <ScheduleSection />
+        <SponsorsSection />
+        <FAQSection />
+        <FooterSection />
       </div>
-    </div>
+    </>
   );
 };
 
