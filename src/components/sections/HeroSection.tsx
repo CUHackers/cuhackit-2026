@@ -26,7 +26,7 @@ const HeroSection = () => {
       </div> */}
 
       {/* Logo positioned in the hero section */}
-      <div className="absolute z-30 top-40 left-1/2 -translate-x-1/2 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-5xl">
+      <div className="absolute z-30 top-40 align-top left-1/2 -translate-x-1/2 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-5xl">
         <img 
           src="/assets/Logo2.svg" 
           alt="CUhackit '26 Logo" 

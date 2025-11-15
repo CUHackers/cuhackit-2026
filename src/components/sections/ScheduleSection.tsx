@@ -44,7 +44,7 @@ const typeColors = {
 
 const ScheduleSection = () => {
   return (
-    <section className="relative py-24">
+    <section id="schedule" className="relative py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-5xl font-western mb-4" style={{ textShadow: 'var(--shadow-text)' }}>

@@ -5,22 +5,37 @@ import './NavBar.css';
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const navbarHeight = 104; // Adjust based on your navbar height
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      setIsMenuOpen(false); // Close mobile menu after clicking
+    }
+  };
+
   return (
     <>
       <nav className="navbar">
         <div className="navbar-container">
           {/* Desktop Navigation - hidden on small screens */}
           <div className="desktop-nav">
-            <button className="nav-button">
+            <button className="nav-button" onClick={() => scrollToSection('about')}>
               ABOUT
             </button>
-            <button className="nav-button">
+            <button className="nav-button" onClick={() => scrollToSection('schedule')}>
               SCHEDULE
             </button>
-            <button className="nav-button">
+            <button className="nav-button" onClick={() => scrollToSection('previous-hackathons')}>
               PREVIOUS HACKATHONS
             </button>
-            <button className="nav-button">
+            <button className="nav-button" onClick={() => scrollToSection('register')}>
               REGISTER
             </button>
           </div>
@@ -40,25 +55,25 @@ const NavBar = () => {
         <div className="mobile-menu">
           <button 
             className="nav-button"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => scrollToSection('about')}
           >
             ABOUT
           </button>
           <button 
             className="nav-button"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => scrollToSection('schedule')}
           >
             SCHEDULE
           </button>
           <button 
             className="nav-button"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => scrollToSection('previous-hackathons')}
           >
             PREVIOUS HACKATHONS
           </button>
           <button 
             className="nav-button"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => scrollToSection('register')}
           >
             REGISTER
           </button>

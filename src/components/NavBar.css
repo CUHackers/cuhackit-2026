@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   z-index: 50;
-  padding: 2rem;
+  padding: 2rem 2rem;
   background-color: #106f57;
 }
 
@@ -54,7 +54,8 @@
 
 .mobile-menu {
   position: fixed;
-  top: 120px;
+  /* top: calc(2rem + 1rem + 32px); padding-top + padding-bottom + icon height */
+  top: calc(4rem);
   left: 0;
   right: 0;
   z-index: 40;
@@ -64,6 +65,8 @@
   align-items: center;
   padding: 1.5rem 0;
   gap: 1.5rem;
+  margin-top: 0;
+  border-top: none;
 }
 
 .mobile-menu .nav-button {

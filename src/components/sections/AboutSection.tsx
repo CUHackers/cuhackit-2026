@@ -30,7 +30,7 @@ const features = [
 
 const AboutSection = () => {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section id="about" className="relative py-24 overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

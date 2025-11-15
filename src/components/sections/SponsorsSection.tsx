@@ -22,7 +22,7 @@ const sponsorTiers = [
 
 const SponsorsSection = () => {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section id="previous-hackathons" className="relative py-24 overflow-hidden">
       {/* Background effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
 
