@@ -1,0 +1,88 @@
+/* NavBar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 2rem;
+  background-color: #106f57;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.nav-button {
+  font-family: "brim-narrow-combined-2", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem; /* text-3xl */
+  color: #fef7dd;
+  -webkit-text-stroke: 0.25px #000000;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  transition: opacity 0.3s;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  opacity: 0.8;
+}
+
+.desktop-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hamburger-button {
+  position: absolute;
+  right: 0;
+  padding: 0.5rem;
+  color: #fef7dd;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 120px;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background-color: #106f57;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 0;
+  gap: 1.5rem;
+}
+
+.mobile-menu .nav-button {
+  font-size: 1.5rem; /* text-2xl */
+}
+
+/* Responsive breakpoints */
+@media (min-width: 1024px) {
+  .hamburger-button {
+    display: none;
+  }
+  
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .desktop-nav {
+    display: none;
+  }
+}

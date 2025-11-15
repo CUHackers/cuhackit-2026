@@ -3,27 +3,38 @@ import { Calendar, MapPin, Users } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ backgroundColor: '#a8c2ff' }}>
       {/* Background image (TitleBackground.svg) - center and fill the screen */}
       <div
         className="absolute inset-0 z-0"
         style={{
           // Place the SVG on top and a vertical two-color background beneath it.
           // Top and bottom are solid colors with an abrupt split at 50% (no gradient blending)
-          backgroundImage: "url('/assets/TitleBackground.svg'), linear-gradient(to bottom, #a8c2ff 0%, #a8c2ff 50%, #be732a 50%, #be732a 100%)",
+          // backgroundImage: "url('/assets/TitleBackground.svg')",
+          backgroundImage: "url('/assets/Town.svg')", // Fix this later to have moving skys
           backgroundPosition: 'center center, center center',
           backgroundSize: 'cover, cover',
           backgroundRepeat: 'no-repeat, no-repeat',
+          // backgroundColor: '#a8c2ff',
         }}
       />
 
       {/* Animated background elements */}
-  <div className="absolute inset-0 overflow-hidden z-10">
+  {/* <div className="absolute inset-0 overflow-hidden z-10">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
+      </div> */}
+
+      {/* Logo positioned in the hero section */}
+      <div className="absolute z-30 top-40 left-1/2 -translate-x-1/2 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-5xl">
+        <img 
+          src="/assets/Logo2.svg" 
+          alt="CUhackit '26 Logo" 
+          className="w-full h-auto"
+        />
       </div>
 
-  <div className="container mx-auto px-4 relative z-20 text-center">
+  {/* <div className="container mx-auto px-4 relative z-20 text-center">
         <div className="animate-fade-in">
           <h1 className="text-6xl md:text-8xl font-western mb-6" style={{ textShadow: 'var(--shadow-text)', }}>
             <span style={{ color: '#153012' }}>CUhackit '26</span>
@@ -64,7 +75,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-      </div>
+      </div> */}
     </section>
   );
 };
