@@ -8,7 +8,7 @@ import SponsorsSection from '@/components/sections/SponsorsSection';
 import FAQSection from '@/components/sections/FAQSection';
 import FooterSection from '@/components/sections/FooterSection';
 
-const Index = () => {
+function Index() {
   const [showDoors, setShowDoors] = useState(true);
 
   useEffect(() => {
