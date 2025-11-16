@@ -1,12 +1,14 @@
 
-const ScheduleSection = () => {
+const TemplateSection = () => {
+  
+  
   
   return (
     <div className="snap-start w-screen h-screen" id="about">
       <div 
         className="relative w-full h-full overflow-hidden"
         style={{
-          backgroundImage: "url('/assets/TemplateSchedule.svg')",
+          backgroundImage: "url('/assets/TemplateTemplate.svg')",
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
@@ -14,8 +16,7 @@ const ScheduleSection = () => {
       />
     </div>
   );
-
-
+  
 };
 
-export default ScheduleSection;
+export default TemplateSection;
