@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
-import SaloonDoors from '@/components/SaloonDoors';
+import SaloonDoors from '@/components/SaloonDoorsFixed';
 import NavBar from '@/components/NavBar';
 
 import HeroSection from '@/components/sections/HeroSection';
@@ -35,18 +35,6 @@ function Index() {
  
   const [isLargeScreen, setIsLargeScreen] = useState(false);
   
-
-  // Door animations
-  useEffect(() => {
-    // Remove doors from DOM after animation completes
-    const timer = setTimeout(() => {
-      setShowDoors(false);
-    }, 20000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-
   useEffect(() => {
     const checkScreenSize = () => {
       setIsLargeScreen(window.innerWidth >= 1024);
@@ -72,7 +60,15 @@ function Index() {
     
 
       // ignore everything else if on mobile since we dont have horiz. scroll there
-      if (!isLargeScreen) return;
+      if (!isLargeScreen) {
+        // Reset styles for small screens
+        const stickyDiv = contentRef.current?.parentElement;
+        if (stickyDiv) {
+          stickyDiv.style.top = '0px';
+          stickyDiv.style.height = '';
+        }
+        return;
+      }
 
       const container = containerRef.current;
       const content = contentRef.current;
@@ -81,10 +77,18 @@ function Index() {
       const rect = container.getBoundingClientRect();
 
       // i did the math trust me bro
+      const navbarHeight = document.querySelector('.navbar')?.clientHeight ?? 0;
+
+      // Set the sticky div to start below the navbar
+      const stickyDiv = contentRef.current.parentElement;
+      if (stickyDiv) {
+        stickyDiv.style.top = `${navbarHeight}px`;
+        stickyDiv.style.height = `calc(100vh - ${navbarHeight}px)`;
+      }
+
       const scrollProgress = -rect.top / (window.innerHeight * (3 / HORIZ_SCROLL_SPEED_MULTIPLIER - 1));
       const clampedScrollProgress = Math.max(Math.min(scrollProgress, 1), 0);
       content.style.transform = `translateX(-${clampedScrollProgress * 200}vw)`;
-      console.log('please');
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -100,7 +104,6 @@ function Index() {
   }, [aboutPageHingeAnimationDone, isLargeScreen]); // Re-run effect when isLargeScreen changes
 
   
-  // Navbar scrolling logic, i dont think we need it here
   const scrollToSection = (sectionId: string) => {
     if (!isLargeScreen) {
       // For mobile/tablet, use normal scroll behavior
@@ -150,7 +153,7 @@ function Index() {
 
   return (
     <>
-      {showDoors && <SaloonDoors />}
+      {showDoors && <SaloonDoors onComplete={() => setShowDoors(false)} />}
       <NavBar />
       
       <div className="min-h-screen bg-background">
@@ -165,20 +168,28 @@ function Index() {
           <div className="sticky top-0 overflow-hidden lg:h-screen h-fit">
             <div 
               ref={contentRef}
-              className={`relative snap-x bg-green-400 transition-transform ease-out scroll-smooth ${
+              className={`relative snap-x bg-yellow-900 transition-transform ease-out scroll-smooth ${
                 isLargeScreen ? "flex w-[300vw]" : "block w-full"
               }`}
             >
-              
-              <AboutSection />
-              <ScheduleSection />
-              <TemplateSection />
-              
-              {/* <img
-                className="pillar1 hidden lg:block z-50"
-                src="/about/about_pillar.webp"
-              ></img> */}
 
+              <AboutSection />
+              
+              <img
+                className="pillar1 hidden lg:block z-50"
+                src="/assets/Pillar.svg"
+              ></img>
+
+              <ScheduleSection />
+              <img
+                className="pillar1 hidden lg:block z-50"
+                src="/assets/Pillar.svg"
+              ></img>
+              <TemplateSection />
+              <img
+                className="pillar1 hidden lg:block z-50"
+                src="/assets/Pillar.svg"
+              ></img>
               {/* <div id="schedule"> */}
                 {/* Go back in an add in mobile pages */}
                 {/* {isLargeScreen? <TemplateScheduleSection /> : <TemplateScheduleSection />} */}
