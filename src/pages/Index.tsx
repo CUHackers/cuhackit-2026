@@ -153,7 +153,7 @@ function Index() {
 
   return (
     <>
-      {showDoors && <SaloonDoors onComplete={() => setShowDoors(false)} />}
+      {showDoors && <SaloonDoors onComplete={() => setShowDoors(false)} lifeAfterAnimationMs={100} />}
       <NavBar />
       
       <div className="min-h-screen bg-background">

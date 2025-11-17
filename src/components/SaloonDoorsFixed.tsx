@@ -8,7 +8,7 @@ interface SaloonDoorsProps {
   mode?: 'slide' | 'swing';
 }
 
-const SaloonDoors: React.FC<SaloonDoorsProps> = ({ onComplete, lifeAfterAnimationMs, mode = 'slide' }) => {
+const SaloonDoors: React.FC<SaloonDoorsProps> = ({ onComplete, lifeAfterAnimationMs, mode = 'swing' }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [destroyed, setDestroyed] = useState(false);
 
@@ -55,7 +55,7 @@ const SaloonDoors: React.FC<SaloonDoorsProps> = ({ onComplete, lifeAfterAnimatio
     rightStyle.transform = isOpen ? 'translateX(110%)' : 'translateX(0)';
     rightStyle.transition = TRANSITION;
     rightStyle.transformStyle = 'preserve-3d';
-  } else {
+  } else if (mode === 'swing') {
     leftStyle.willChange = 'transform';
     leftStyle.transformOrigin = 'left center';
     leftStyle.transform = isOpen ? 'rotateY(100deg)' : 'rotateY(0deg)';
@@ -74,18 +74,19 @@ const SaloonDoors: React.FC<SaloonDoorsProps> = ({ onComplete, lifeAfterAnimatio
   return (
     <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 2147483647, perspective: '1400px' }}>
       {mode === 'swing' && (
+        // Define keyframe animations for swinging doors
         <style>{`
           @keyframes ${LEFT_ANIMATION_NAME} {
             0% { transform: rotateY(0deg); }
-            60% { transform: rotateY(115deg); }
-            80% { transform: rotateY(95deg); }
-            100% { transform: rotateY(100deg); }
+            40% { transform: rotateY(115deg); }
+            60% { transform: rotateY(95deg); }
+            100% { transform: rotateY(120deg); }
           }
           @keyframes ${RIGHT_ANIMATION_NAME} {
             0% { transform: rotateY(0deg); }
-            60% { transform: rotateY(-115deg); }
-            80% { transform: rotateY(-95deg); }
-            100% { transform: rotateY(-100deg); }
+            40% { transform: rotateY(-115deg); }
+            60% { transform: rotateY(-95deg); }
+            100% { transform: rotateY(-120deg); }
           }
         `}</style>
       )}
