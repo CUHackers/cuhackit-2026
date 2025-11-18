@@ -7,7 +7,7 @@ import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ScheduleSection from '@/components/sections/ScheduleSection';
 import SponsorsSection from '@/components/sections/archive/SponsorsSection';
-import FAQSection from '@/components/sections/archive/FAQSection';
+import FAQSection from '@/components/sections/FAQSection';
 import FooterSection from '@/components/sections/FooterSection';
 
 // Messing with some stuff
@@ -152,7 +152,7 @@ function Index() {
   };
 
   return (
-    <>
+    <>j
       {showDoors && <SaloonDoors onComplete={() => setShowDoors(false)} lifeAfterAnimationMs={100} />}
       <NavBar />
       
@@ -212,8 +212,9 @@ function Index() {
             /> */}
           </div>
         </section>
-      <SponsorsSection />
         <FAQSection />
+        <SponsorsSection />
+        
         <FooterSection />
       </div>
     </>
