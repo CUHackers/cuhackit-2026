@@ -74,7 +74,7 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="snap-start w-screen min-h-screen py-16 px-4" id="faq" style={{ backgroundColor: '#fef7dd' }}>
+    <div className="snap-start w-screen min-h-screen py-32 px-4" id="faq" style={{ backgroundColor: '#fef7dd' }}>
       <div className="max-w-4xl mx-auto">
         {/* Title */}
         <h2 

@@ -127,7 +127,7 @@ function Index() {
         targetPercent = 0.5; // Middle section (50%)
         break;
       case "schedule":
-        targetPercent = 1; // Last section (100%)
+        targetPercent = 0.5; // Last section (100%)
         break;
       default: {
         // For FAQ and Sponsors, scroll to the vertical section
@@ -152,13 +152,14 @@ function Index() {
   };
 
   return (
-    <>j
+    <>
       {showDoors && <SaloonDoors onComplete={() => setShowDoors(false)} lifeAfterAnimationMs={100} />}
-      <NavBar />
+      <NavBar isLargeScreen={isLargeScreen} scrollToSection={scrollToSection} />
       
       <div className="min-h-screen bg-background">
-        <HeroSection />
-
+        <div id="hero">
+          <HeroSection />
+        </div>
         {/* Horizontal scrolling sectiion */}
         <section
           ref={containerRef}
@@ -172,20 +173,28 @@ function Index() {
                 isLargeScreen ? "flex w-[300vw]" : "block w-full"
               }`}
             >
-
-              <AboutSection />
+              <div id="about">
+                <AboutSection />
+              </div>
               
               <img
                 className="pillar1 hidden lg:block z-50"
                 src="/assets/Pillar.svg"
               ></img>
-
-              <ScheduleSection />
+              
+              <div id='schedule'>
+                <ScheduleSection />
+              </div>
+              
               <img
                 className="pillar1 hidden lg:block z-50"
                 src="/assets/Pillar.svg"
               ></img>
-              <TemplateSection />
+              
+              <div id="template">
+                <TemplateSection />
+              </div>
+              
               <img
                 className="pillar1 hidden lg:block z-50"
                 src="/assets/Pillar.svg"

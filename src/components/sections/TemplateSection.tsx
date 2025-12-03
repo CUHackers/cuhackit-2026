@@ -4,7 +4,7 @@ const TemplateSection = () => {
   
   
   return (
-    <div className="snap-start w-screen h-screen" id="about">
+    <div className="snap-start w-screen h-screen">
       <div 
         className="relative w-full h-full overflow-hidden"
         style={{

@@ -2,9 +2,11 @@
 const ScheduleSection = () => {
   
   return (
-    <div className="snap-start w-screen h-screen" id="about">
+    <div className="snap-start w-screen h-screen" >
       <div 
         className="relative w-full h-full overflow-hidden"
+        // style={{backgroundColor: '#ffffff'}}
+
         style={{
           backgroundImage: "url('/assets/TemplateSchedule.svg')",
           backgroundPosition: 'center center',
