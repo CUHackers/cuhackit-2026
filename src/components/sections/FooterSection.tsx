@@ -47,13 +47,13 @@ const FooterSection = () => {
             </a>
             
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-black/10 border border-black/20 flex items-center justify-center hover:bg-black/20 transition-all duration-300 hover:scale-110 text-black">
+              <a href="https://www.tiktok.com/@cuhackit" className="w-10 h-10 rounded-full bg-black/10 border border-black/20 flex items-center justify-center hover:bg-black/20 transition-all duration-300 hover:scale-110 text-black">
                 <TikTokIcon className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-black/10 border border-black/20 flex items-center justify-center hover:bg-black/20 transition-all duration-300 hover:scale-110 text-black">
+              <a href="https://www.instagram.com/cuhackit" className="w-10 h-10 rounded-full bg-black/10 border border-black/20 flex items-center justify-center hover:bg-black/20 transition-all duration-300 hover:scale-110 text-black">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-black/10 border border-black/20 flex items-center justify-center hover:bg-black/20 transition-all duration-300 hover:scale-110 text-black">
+              <a href="https://www.linkedin.com/company/cuhackit/" className="w-10 h-10 rounded-full bg-black/10 border border-black/20 flex items-center justify-center hover:bg-black/20 transition-all duration-300 hover:scale-110 text-black">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
