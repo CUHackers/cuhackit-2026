@@ -1,0 +1,7 @@
+/* Brim narrow font style */
+.brim-narrow-text {
+  color: white;
+  font-size: 4rem; /* Equivalent to text-6xl */
+  font-weight: 200; /* Equivalent to font-thin */
+  text-align: center;
+}
