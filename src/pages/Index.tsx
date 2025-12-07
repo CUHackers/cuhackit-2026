@@ -9,6 +9,7 @@ import ScheduleSection from '@/components/sections/ScheduleSection';
 import SponsorsSection from '@/components/sections/archive/SponsorsSection';
 import FAQSection from '@/components/sections/FAQSection';
 import FooterSection from '@/components/sections/FooterSection';
+import OrganizersSection from '@/components/sections/OrganizersSection';
 
 // Messing with some stuff
 // import { AboutPage } from '@/components/REFERENCE_about/AboutPage';
@@ -191,8 +192,8 @@ function Index() {
                 src="/assets/Pillar.svg"
               ></img>
               
-              <div id="template">
-                <TemplateSection />
+              <div id="organizers">
+                <OrganizersSection />
               </div>
               
               <img
