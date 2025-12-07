@@ -12,7 +12,7 @@ const FooterSection = () => {
       id="register" 
       className="relative py-16 border-t border-border/50"
       style={{
-        backgroundImage: "url('/assets/FooterSection/FooterBG.webp')",
+        backgroundImage: "url('/assets/FooterSection/Footer.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -40,7 +40,7 @@ const FooterSection = () => {
               href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="font-bold underline hover:text-primary transition-colors text-3xl"
+              className="font-bold underline hover:text-white transition-colors text-3xl"
               style={{ fontFamily: 'Rye, serif' }}
             >
               MLH CODE OF CONDUCT
@@ -59,11 +59,17 @@ const FooterSection = () => {
             </div>
 
             <p className="font-body font-semibold text-lg">Clemson University, Clemson, SC</p>
-            <p className="font-body text-lg">Made with love 💛</p>
+            <p className="font-body text-lg">Made with good vibes 😎</p>
           </div>
 
-          {/* Right Side - Empty for spacing to keep center centered */}
-          <div className="hidden md:block"></div>
+          {/* Right Side - Add Paw Image with Relative Positioning */}
+          <div className="hidden md:flex justify-end relative top-[-30%]">
+            <img 
+              src="/assets/FooterSection/Paw_RGB__White.png" 
+              alt="Clemson Paw Logo" 
+              className="h-32 w-auto"
+            />
+          </div>
 
         </div>
       </div>
