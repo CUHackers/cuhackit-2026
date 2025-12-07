@@ -1,4 +1,5 @@
 import '../../styles/global.css';
+import sponsorsBg from '@/assets/Sponsors.svg';
 
 const TemplateSection = () => {
   return (
@@ -6,13 +7,13 @@ const TemplateSection = () => {
       <div 
         className="relative w-full h-full overflow-hidden flex items-center justify-center"
         style={{
-          backgroundImage: "url('/src/assets/Sponsors.svg')",
+          backgroundImage: `url(${sponsorsBg})`,
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <h1 className="brim-narrow-text">
+        <h1 className="faq-header-text">
           ANNOUNCING SPONSORS SOON!
         </h1>
       </div>

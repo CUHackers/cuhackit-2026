@@ -1,4 +1,7 @@
 import { Mail, Instagram, Linkedin } from 'lucide-react';
+import footerBg from '@/assets/FooterSection/Footer.png';
+import cuhackitLogo from '@/assets/FooterSection/CUhackitLogo.svg';
+import pawLogo from '@/assets/FooterSection/Paw_RGB__White.png';
 
 const TikTokIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
@@ -12,7 +15,7 @@ const FooterSection = () => {
       id="register" 
       className="relative py-16 border-t border-border/50"
       style={{
-        backgroundImage: "url('/src/assets/FooterSection/Footer.png')",
+        backgroundImage: `url(${footerBg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -24,7 +27,7 @@ const FooterSection = () => {
           {/* Left Side - White Text */}
           <div className="text-white flex flex-col gap-2 items-center md:items-start text-center md:text-left">
             <img 
-              src="/src/assets/FooterSection/CUhackitLogo.svg" 
+              src={cuhackitLogo} 
               alt="CUhackit Logo" 
               className="h-16 w-auto mb-2"
             />
@@ -59,13 +62,13 @@ const FooterSection = () => {
             </div>
 
             <p className="font-body font-semibold text-lg">Clemson University, Clemson, SC</p>
-            <p className="font-body text-lg">Made with good vibes 😎</p>
+            <p className="font-body text-lg">Made with love 💛</p>
           </div>
 
-          {/* Right Side - Add Paw Image with Relative Positioning */}
-          <div className="hidden md:flex justify-end relative top-[-30%]">
+          {/* Right Side - Add Paw Image */}
+          <div className="hidden md:flex justify-end relative">
             <img 
-              src="/src/assets/FooterSection/Paw_RGB__White.png" 
+              src={pawLogo} 
               alt="Clemson Paw Logo" 
               className="h-32 w-auto"
             />
