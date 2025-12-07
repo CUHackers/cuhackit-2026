@@ -108,7 +108,7 @@ const HeroSection = () => {
       </div>
 
       {/* Logo positioned in the hero section */}
-      <div className="absolute z-30 top-40 align-top left-1/2 -translate-x-1/2 w-[90%] sm:w-[80%] sm:top-[30%] md:top-40 md:w-[70%] lg:w-[60%] max-w-5xl">
+      <div className="absolute z-30 top-40 align-top left-1/2 -translate-x-1/2 w-[90%] portrait:top-[37%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-5xl">
         <img 
         // A/B test Logo2 and LogoNew
           src="/assets/LogoNew.svg"  
