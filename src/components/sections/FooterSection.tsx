@@ -2,7 +2,16 @@ import { Mail, Instagram, Twitter, Github, Linkedin } from 'lucide-react';
 
 const FooterSection = () => {
   return (
-    <footer id="register" className="relative py-16 border-t border-border/50">
+    <footer 
+      id="register" 
+      className="relative py-16 border-t border-border/50"
+      style={{
+        backgroundImage: "url('/assets/FooterSection/FooterBG.webp')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Branding */}

@@ -1,0 +1,15 @@
+.mobile-photos-container {
+  background-image: url('/assets/PhotosSection/PhotosBG.svg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mobile-photos-header {
+  font-family: "brim-narrow-combined-2", sans-serif;
+  font-weight: 400;
+  color: #fef7dd;
+  -webkit-text-stroke: .1px #000000;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.02em;
+}

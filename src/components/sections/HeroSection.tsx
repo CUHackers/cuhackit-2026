@@ -51,15 +51,16 @@ const HeroSection = () => {
       />
 
       {/* Animated clouds layers (three parallax layers) */}
-      <div className="hero-clouds h-40 md:h-56 lg:h-72 z-20">
+      {/* <div className="hero-clouds h-40 md:h-56 lg:h-72 portrait:top-[30%] z-20"> */}
+      <div className="hero-clouds h-80 portrait:top-[10%] md:h-56 lg:h-72 z-20">
         <div
           className="hero-clouds__layer hero-clouds__layer--slow"
           style={{ backgroundImage: "url('/assets/Clouds.svg')" }}
         />
-        {/* <div
-          className="hero-clouds__layer hero-clouds__layer--mid"
+        <div
+          className="hero-clouds__layer hero-clouds__layer--mid "
           style={{ backgroundImage: "url('/assets/Clouds.svg')", top: '10%' }}
-        /> */}
+        />
         <div
           className="hero-clouds__layer hero-clouds__layer--fast"
           style={{ backgroundImage: "url('/assets/Clouds.svg')", top: '20%' }}
@@ -108,7 +109,8 @@ const HeroSection = () => {
       </div>
 
       {/* Logo positioned in the hero section */}
-      <div className="absolute z-30 top-40 align-top left-1/2 -translate-x-1/2 w-[90%] portrait:top-[37%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-5xl">
+      <div className="absolute z-30 top-40 align-top left-1/2 -translate-x-1/2 w-[90%] portrait:top-[20%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-5xl">
+      {/* <div className="absolute z-30 top-40 align-top left-1/2 -translate-x-1/2 w-[90%] portrait:top-[37%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-5xl"> */}
         <img 
         // A/B test Logo2 and LogoNew
           src="/assets/LogoNew.svg"  

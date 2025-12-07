@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 50;
+  z-index: 9999; /* Increased z-index to ensure it stays on top of all content */
   padding: 2rem 2rem;
   background-color: #106f57;
 }
@@ -23,7 +23,7 @@
   font-weight: 400;
   font-size: 1.875rem; /* text-3xl */
   color: #fef7dd;
-  -webkit-text-stroke: 0.25px #000000;
+  /* -webkit-text-stroke: 0.25px #000000; */
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
   transition: opacity 0.3s;
   background: none;
@@ -58,7 +58,7 @@
   top: calc(4rem);
   left: 0;
   right: 0;
-  z-index: 40;
+  z-index: 9998; /* Increased z-index to be above content but below navbar/badge */
   background-color: #106f57;
   display: flex;
   flex-direction: column;

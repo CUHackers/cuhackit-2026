@@ -5,8 +5,9 @@ import NavBar from '@/components/NavBar';
 
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
-import ScheduleSection from '@/components/sections/PhotosSection';
-import SponsorsSection from '@/components/sections/archive/SponsorsSection';
+import PhotosSection from '@/components/sections/PhotosSection';
+import MobilePhotosSection from '@/components/sections/MobilePhotos';
+import SponsorsSection from '@/components/sections/SponsorsSection';
 import FAQSection from '@/components/sections/FAQSection';
 import FooterSection from '@/components/sections/FooterSection';
 import OrganizersSection from '@/components/sections/OrganizersSection';
@@ -18,6 +19,7 @@ import TracksSection from '@/components/sections/TracksSection';
 import TemplateSection from '@/components/sections/TemplateSection';
 import MobileOrganizers from '@/components/sections/MobileOrganizers';
 import MobileAboutSection from '@/components/sections/MobileAboutSection';
+import MobilePhotos from '@/components/sections/MobilePhotos';
 
 const HORIZ_SCROLL_SPEED_MULTIPLIER = .5;
 
@@ -187,7 +189,7 @@ function Index() {
               ></img>
               
               <div id='schedule'>
-                <ScheduleSection />
+                {isLargeScreen? <PhotosSection /> : <MobilePhotosSection />}
               </div>
               
               <img
