@@ -14,7 +14,7 @@ const OrganizersSection = () => {
       <div 
         className="relative w-full h-full overflow-hidden flex items-center justify-center"
         style={{
-          backgroundImage: "url('/assets/OrganizersSection/Background.svg')",
+          backgroundImage: "url('/assets/OrganizersSection/OrganizersBG.svg')",
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',

@@ -5,17 +5,19 @@ import NavBar from '@/components/NavBar';
 
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
-import ScheduleSection from '@/components/sections/ScheduleSection';
+import ScheduleSection from '@/components/sections/PhotosSection';
 import SponsorsSection from '@/components/sections/archive/SponsorsSection';
 import FAQSection from '@/components/sections/FAQSection';
 import FooterSection from '@/components/sections/FooterSection';
 import OrganizersSection from '@/components/sections/OrganizersSection';
+import TracksSection from '@/components/sections/TracksSection';
 
 // Messing with some stuff
 // import { AboutPage } from '@/components/REFERENCE_about/AboutPage';
 // import { TracksPage } from '@/components/REFERENCE_tracks/TracksPage';
 import TemplateSection from '@/components/sections/TemplateSection';
 import MobileOrganizers from '@/components/sections/MobileOrganizers';
+import MobileAboutSection from '@/components/sections/MobileAboutSection';
 
 const HORIZ_SCROLL_SPEED_MULTIPLIER = .5;
 
@@ -176,7 +178,7 @@ function Index() {
               }`}
             >
               <div id="about">
-                <AboutSection />
+                {isLargeScreen? <AboutSection /> : <MobileAboutSection />}
               </div>
               
               <img
@@ -223,9 +225,9 @@ function Index() {
             /> */}
           </div>
         </section>
+        <TracksSection />
         <FAQSection />
         <SponsorsSection />
-        
         <FooterSection />
       </div>
     </>
