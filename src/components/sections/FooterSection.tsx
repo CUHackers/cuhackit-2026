@@ -1,4 +1,10 @@
-import { Mail, Instagram, Twitter, Github, Linkedin } from 'lucide-react';
+import { Mail, Instagram, Linkedin } from 'lucide-react';
+
+const TikTokIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+  </svg>
+);
 
 const FooterSection = () => {
   return (
@@ -13,54 +19,52 @@ const FooterSection = () => {
       }}
     >
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          {/* Branding */}
-          <div>
-            <h3 className="text-3xl font-western text-gradient mb-4" style={{ textShadow: 'var(--shadow-text)' }}>CUhackit '26</h3>
-            <p className="text-muted-foreground font-body">
-              Clemson's wildest hackathon rodeo bringing together innovators, trail blazers, and frontier dreamers.
-            </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+          
+          {/* Left Side - White Text */}
+          <div className="text-white flex flex-col gap-2 items-center md:items-start text-center md:text-left">
+            <img 
+              src="/assets/FooterSection/CUhackitLogo.svg" 
+              alt="CUhackit Logo" 
+              className="h-16 w-auto mb-2"
+            />
+            <p className="font-body text-lg">© 2026 CUhackit</p>
+            <a href="mailto:cuhackers@clemson.edu" className="flex items-center gap-2 hover:underline text-lg">
+               <Mail className="w-5 h-5" /> cuhackers@clemson.edu
+            </a>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-xl font-body font-bold mb-4 text-primary">Trail Map</h4>
-            <ul className="space-y-2 text-muted-foreground font-body">
-              <li className="hover:text-primary transition-colors cursor-pointer">About</li>
-              <li className="hover:text-primary transition-colors cursor-pointer">Schedule</li>
-              <li className="hover:text-primary transition-colors cursor-pointer">Partners</li>
-              <li className="hover:text-primary transition-colors cursor-pointer">FAQ</li>
-              <li className="hover:text-primary transition-colors cursor-pointer">Code of the West</li>
-            </ul>
-          </div>
-
-          {/* Contact & Social */}
-          <div>
-            <h4 className="text-xl font-body font-bold mb-4 text-primary">Join the Posse</h4>
-            <div className="flex items-center gap-2 mb-4 text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-              <Mail className="w-5 h-5" />
-              <span className="font-body">hello@cuhackit.com</span>
-            </div>
+          {/* Center Side - Black Text */}
+          <div className="text-black flex flex-col gap-4 items-center text-center">
+            <a 
+              href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="font-bold underline hover:text-primary transition-colors text-3xl"
+              style={{ fontFamily: 'Rye, serif' }}
+            >
+              MLH CODE OF CONDUCT
+            </a>
+            
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-card/50 border border-border/50 flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 hover:scale-110">
+              <a href="#" className="w-10 h-10 rounded-full bg-black/10 border border-black/20 flex items-center justify-center hover:bg-black/20 transition-all duration-300 hover:scale-110 text-black">
+                <TikTokIcon className="w-5 h-5" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-black/10 border border-black/20 flex items-center justify-center hover:bg-black/20 transition-all duration-300 hover:scale-110 text-black">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-card/50 border border-border/50 flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 hover:scale-110">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-card/50 border border-border/50 flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 hover:scale-110">
-                <Github className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-card/50 border border-border/50 flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 hover:scale-110">
+              <a href="#" className="w-10 h-10 rounded-full bg-black/10 border border-black/20 flex items-center justify-center hover:bg-black/20 transition-all duration-300 hover:scale-110 text-black">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
-          </div>
-        </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t-2 border-primary/30 text-center text-muted-foreground">
-          <p className="font-body">© 2026 CUhackit. Happy Trails, Partner. 🤠</p>
+            <p className="font-body font-semibold text-lg">Clemson University, Clemson, SC</p>
+            <p className="font-body text-lg">Made with love 💛</p>
+          </div>
+
+          {/* Right Side - Empty for spacing to keep center centered */}
+          <div className="hidden md:block"></div>
+
         </div>
       </div>
     </footer>
