@@ -94,7 +94,7 @@ const SaloonDoors: React.FC<SaloonDoorsProps> = ({ onComplete, lifeAfterAnimatio
       {/* Left Door (SVG) */}
       <div className={`absolute top-[5vh] left-0 h-[90vh] w-1/2`} style={leftStyle}>
         <img
-          src="/assets/LeftDoor.svg"
+          src="/src/assets/LeftDoor.svg"
           alt="Left Saloon Door"
           className="w-full h-full object-cover block"
           style={{ display: 'block', backfaceVisibility: 'hidden', objectPosition: 'top' }}
@@ -104,7 +104,7 @@ const SaloonDoors: React.FC<SaloonDoorsProps> = ({ onComplete, lifeAfterAnimatio
       {/* Right Door (SVG) */}
       <div className={`absolute top-[5vh] right-0 h-[90vh] w-1/2`} style={rightStyle}>
         <img
-          src="/assets/RightDoor.svg"
+          src="/src/assets/RightDoor.svg"
           alt="Right Saloon Door"
           className="w-full h-full object-cover block"
           style={{ display: 'block', backfaceVisibility: 'hidden', objectPosition: 'top' }}

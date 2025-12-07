@@ -8,7 +8,7 @@ const MobileOrganizers = () => {
       <div 
         className="relative w-full h-full overflow-hidden"
         style={{
-          backgroundImage: "url('/assets/OrganizersSection/MobileBG.svg')",
+          backgroundImage: "url('/src/assets/OrganizersSection/MobileBG.svg')",
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',

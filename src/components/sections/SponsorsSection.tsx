@@ -6,7 +6,7 @@ const TemplateSection = () => {
       <div 
         className="relative w-full h-full overflow-hidden flex items-center justify-center"
         style={{
-          backgroundImage: "url('/assets/Sponsors.svg')",
+          backgroundImage: "url('/src/assets/Sponsors.svg')",
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',

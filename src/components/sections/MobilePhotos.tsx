@@ -14,7 +14,7 @@ const MobilePhotos = () => {
 
         {/* Mobile Photos image with relative sizing */}
         <img 
-          src="/assets/PhotosSection/mPhotos.webp" 
+          src="/src/assets/PhotosSection/mPhotos.webp" 
           alt="Event Photos" 
           className="relative w-[85%] h-auto object-contain"
         />

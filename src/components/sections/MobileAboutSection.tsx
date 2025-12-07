@@ -5,7 +5,7 @@ const AboutSection = () => {
         <div className="relative w-full h-full overflow-hidden">
           {/* Background as an <img> so overlays keep consistent relative positioning */}
           <img
-            src="/assets/AboutSection/mAboutBG.svg"
+            src="/src/assets/AboutSection/mAboutBG.svg"
             alt="About background"
             className="absolute inset-0 w-full h-full object-cover object-center"
             aria-hidden

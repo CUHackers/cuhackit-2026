@@ -8,12 +8,12 @@ const HeroSection = () => {
   // Assuming 3 frames for the tornado animation based on "multiple tornado assets"
   // Adjust the array below with actual filenames found in assets/herosection
   const tornadoImages = [
-    // '/assets/HeroSection/tornado0.svg',
-    '/assets/HeroSection/tornado1.svg',
-    '/assets/HeroSection/tornado2.svg',
-    '/assets/HeroSection/tornado3.svg',
-    '/assets/HeroSection/tornado4.svg',
-    // '/assets/HeroSection/tornado5.svg',
+    // '/src/assets/HeroSection/tornado0.svg',
+    '/src/assets/HeroSection/tornado1.svg',
+    '/src/assets/HeroSection/tornado2.svg',
+    '/src/assets/HeroSection/tornado3.svg',
+    '/src/assets/HeroSection/tornado4.svg',
+    // '/src/assets/HeroSection/tornado5.svg',
 
   ];
   
@@ -41,8 +41,8 @@ const HeroSection = () => {
         style={{
           // Place the SVG on top and a vertical two-color background beneath it.
           // Top and bottom are solid colors with an abrupt split at 50% (no gradient blending)
-          // backgroundImage: "url('/assets/TitleBackground.svg')",
-          backgroundImage: "url('/assets/TownSkyNoCloud.svg')", // Fix this later to have moving skys
+          // backgroundImage: "url('/src/assets/TitleBackground.svg')",
+          backgroundImage: "url('/src/assets/TownSkyNoCloud.svg')", // Fix this later to have moving skys
           backgroundPosition: 'center center, center center',
           backgroundSize: 'cover, cover',
           backgroundRepeat: 'no-repeat, no-repeat',
@@ -55,15 +55,15 @@ const HeroSection = () => {
       <div className="hero-clouds h-80 portrait:top-[10%] md:h-56 lg:h-72 z-20">
         <div
           className="hero-clouds__layer hero-clouds__layer--slow"
-          style={{ backgroundImage: "url('/assets/Clouds.svg')" }}
+          style={{ backgroundImage: "url('/src/assets/Clouds.svg')" }}
         />
         <div
           className="hero-clouds__layer hero-clouds__layer--mid "
-          style={{ backgroundImage: "url('/assets/Clouds.svg')", top: '10%' }}
+          style={{ backgroundImage: "url('/src/assets/Clouds.svg')", top: '10%' }}
         />
         <div
           className="hero-clouds__layer hero-clouds__layer--fast"
-          style={{ backgroundImage: "url('/assets/Clouds.svg')", top: '20%' }}
+          style={{ backgroundImage: "url('/src/assets/Clouds.svg')", top: '20%' }}
         />
       </div>
 
@@ -85,7 +85,7 @@ const HeroSection = () => {
           {/* Animated Tornado Image */}
           <img 
             src={tornadoImages[tornadoFrame]}
-            // src="/assets/HeroSection/SVG/tornado1.svg" 
+            // src="/src/assets/HeroSection/SVG/tornado1.svg" 
             alt="Tornado" 
             className="absolute inset-0 w-full h-full object-contain"
           />
@@ -113,7 +113,7 @@ const HeroSection = () => {
       {/* <div className="absolute z-30 top-40 align-top left-1/2 -translate-x-1/2 w-[90%] portrait:top-[37%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-5xl"> */}
         <img 
         // A/B test Logo2 and LogoNew
-          src="/assets/LogoNew.svg"  
+          src="/src/assets/LogoNew.svg"  
           alt="CUhackit '26 Logo" 
           className="w-full h-auto"
         />

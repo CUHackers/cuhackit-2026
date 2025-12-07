@@ -12,7 +12,7 @@ const FooterSection = () => {
       id="register" 
       className="relative py-16 border-t border-border/50"
       style={{
-        backgroundImage: "url('/assets/FooterSection/Footer.png')",
+        backgroundImage: "url('/src/assets/FooterSection/Footer.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -24,7 +24,7 @@ const FooterSection = () => {
           {/* Left Side - White Text */}
           <div className="text-white flex flex-col gap-2 items-center md:items-start text-center md:text-left">
             <img 
-              src="/assets/FooterSection/CUhackitLogo.svg" 
+              src="/src/assets/FooterSection/CUhackitLogo.svg" 
               alt="CUhackit Logo" 
               className="h-16 w-auto mb-2"
             />
@@ -65,7 +65,7 @@ const FooterSection = () => {
           {/* Right Side - Add Paw Image with Relative Positioning */}
           <div className="hidden md:flex justify-end relative top-[-30%]">
             <img 
-              src="/assets/FooterSection/Paw_RGB__White.png" 
+              src="/src/assets/FooterSection/Paw_RGB__White.png" 
               alt="Clemson Paw Logo" 
               className="h-32 w-auto"
             />

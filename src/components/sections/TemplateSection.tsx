@@ -8,7 +8,7 @@ const TemplateSection = () => {
       <div 
         className="relative w-full h-full overflow-hidden"
         style={{
-          backgroundImage: "url('/assets/TemplateTemplate.svg')",
+          backgroundImage: "url('/src/assets/TemplateTemplate.svg')",
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',

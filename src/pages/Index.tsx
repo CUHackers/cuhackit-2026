@@ -185,7 +185,7 @@ function Index() {
               
               <img
                 className="pillar1 hidden lg:block z-50"
-                src="/assets/Pillar.svg"
+                src="/src/assets/Pillar.svg"
               ></img>
               
               <div id='schedule'>
@@ -194,7 +194,7 @@ function Index() {
               
               <img
                 className="pillar1 hidden lg:block z-50"
-                src="/assets/Pillar.svg"
+                src="/src/assets/Pillar.svg"
               ></img>
               
               <div id="organizers">
@@ -203,7 +203,7 @@ function Index() {
               
               <img
                 className="pillar1 hidden lg:block z-50"
-                src="/assets/Pillar.svg"
+                src="/src/assets/Pillar.svg"
               ></img>
               {/* <div id="schedule"> */}
                 {/* Go back in an add in mobile pages */}

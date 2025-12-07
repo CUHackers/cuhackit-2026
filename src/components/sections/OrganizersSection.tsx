@@ -1,12 +1,12 @@
 const OrganizersSection = () => {
   const organizers = [
-    { name: "Malia Fairbanks", role: "Co-Director", linkedin: "https://www.linkedin.com/in/malia-fairbanks/", image: "/assets/OrganizersSection/malia.svg" },
-    { name: "Hazel Torek", role: "Co-Director", linkedin: "https://www.linkedin.com/in/hazel-torek/", image: "/assets/OrganizersSection/hazel.svg" },
-    { name: "Uzayr Syed", role: "Finance", linkedin: "https://www.linkedin.com/in/uzayrsyed/", image: "/assets/OrganizersSection/uzayr.svg" },
-    { name: "Christina Foley", role: "Logistics", linkedin: "https://www.linkedin.com/in/christina-foley/", image: "/assets/OrganizersSection/christina.svg" },
-    { name: "Varun Sethi", role: "Partnership", linkedin: "https://www.linkedin.com/in/vsethi-in/", image: "/assets/OrganizersSection/varun.svg" },
-    { name: "Keely Hong", role: "Partnership/PR", linkedin: "https://www.linkedin.com/in/keelyhong/", image: "/assets/OrganizersSection/keely.svg" },
-    { name: "Mia Yancey", role: "Design", linkedin: "https://www.linkedin.com/in/mia-yancey/", image: "/assets/OrganizersSection/mia.svg" },
+    { name: "Malia Fairbanks", role: "Co-Director", linkedin: "https://www.linkedin.com/in/malia-fairbanks/", image: "/src/assets/OrganizersSection/malia.svg" },
+    { name: "Hazel Torek", role: "Co-Director", linkedin: "https://www.linkedin.com/in/hazel-torek/", image: "/src/assets/OrganizersSection/hazel.svg" },
+    { name: "Uzayr Syed", role: "Finance", linkedin: "https://www.linkedin.com/in/uzayrsyed/", image: "/src/assets/OrganizersSection/uzayr.svg" },
+    { name: "Christina Foley", role: "Logistics", linkedin: "https://www.linkedin.com/in/christina-foley/", image: "/src/assets/OrganizersSection/christina.svg" },
+    { name: "Varun Sethi", role: "Partnership", linkedin: "https://www.linkedin.com/in/vsethi-in/", image: "/src/assets/OrganizersSection/varun.svg" },
+    { name: "Keely Hong", role: "Partnership/PR", linkedin: "https://www.linkedin.com/in/keelyhong/", image: "/src/assets/OrganizersSection/keely.svg" },
+    { name: "Mia Yancey", role: "Design", linkedin: "https://www.linkedin.com/in/mia-yancey/", image: "/src/assets/OrganizersSection/mia.svg" },
   ];
   
   return (
@@ -14,7 +14,7 @@ const OrganizersSection = () => {
       <div 
         className="relative w-full h-full overflow-hidden flex items-center justify-center"
         style={{
-          backgroundImage: "url('/assets/OrganizersSection/OrganizersBG.svg')",
+          backgroundImage: "url('/src/assets/OrganizersSection/OrganizersBG.svg')",
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
@@ -35,7 +35,7 @@ const OrganizersSection = () => {
                 className="absolute bottom-[7%] right-[7%] w-[10%] hover:scale-110 transition-transform duration-200"
               >
                 <img
-                  src="/assets/OrganizersSection/LI-In-Bug.png"
+                  src="/src/assets/OrganizersSection/LI-In-Bug.png"
                   alt="LinkedIn"
                   className="w-full h-auto object-contain"
                 />

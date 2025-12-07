@@ -8,7 +8,7 @@ const TracksSection = () => {
       <div 
         className="relative w-full h-full overflow-hidden"
         style={{
-          backgroundImage: "url('/assets/TracksSection.svg')",
+          backgroundImage: "url('/src/assets/TracksSection.svg')",
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',

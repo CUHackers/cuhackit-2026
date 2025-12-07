@@ -97,7 +97,7 @@ const FAQSection = () => {
                 style={{
                   backgroundColor: '#8b6f47',
                   // Placeholder for texture image overlay
-                  // backgroundImage: 'url(/assets/wood-texture.png)',
+                  // backgroundImage: 'url(/src/assets/wood-texture.png)',
                   backgroundBlendMode: 'multiply'
                 }}
               >
@@ -131,7 +131,7 @@ const FAQSection = () => {
                   style={{
                     backgroundColor: '#a07d4f',
                     // Placeholder for texture image overlay
-                    // backgroundImage: 'url(/assets/wood-texture-light.png)',
+                    // backgroundImage: 'url(/src/assets/wood-texture-light.png)',
                     backgroundBlendMode: 'multiply'
                   }}
                 >
