@@ -1,7 +1,38 @@
-
+import { useState, useEffect } from 'react';
 import './hero.css';
 
 const HeroSection = () => {
+  // State for tornado animation frame
+  const [tornadoFrame, setTornadoFrame] = useState(0);
+  
+  // Assuming 3 frames for the tornado animation based on "multiple tornado assets"
+  // Adjust the array below with actual filenames found in assets/herosection
+  const tornadoImages = [
+    // '/assets/HeroSection/tornado0.svg',
+    '/assets/HeroSection/tornado1.svg',
+    '/assets/HeroSection/tornado2.svg',
+    '/assets/HeroSection/tornado3.svg',
+    '/assets/HeroSection/tornado4.svg',
+    // '/assets/HeroSection/tornado5.svg',
+
+  ];
+  
+  const tornadoSpeed = 150;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTornadoFrame((prev) => (prev + 1) % tornadoImages.length);
+    }, tornadoSpeed); // Change frame every 200ms
+
+    return () => clearInterval(interval);
+  }, [tornadoImages.length]);
+
+  // Calculate days until CUhackit (Example date: Jan 25, 2025 - adjust as needed)
+  const targetDate = new Date('2026-02-27T00:00:00');
+  const today = new Date();
+  const timeDiff = targetDate.getTime() - today.getTime();
+  const daysUntil = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ backgroundColor: '#a8c2ff' }}>
       {/* Background image (TitleBackground.svg) - center and fill the screen */}
@@ -35,7 +66,46 @@ const HeroSection = () => {
         />
       </div>
 
-  
+
+      {/* Tornado with Countdown - Bottom Right */}
+      <div 
+        // Use vmin for width so it scales with the smaller of height or width (responsive to both)
+        className="absolute bottom-[10%] right-[5%] z-20 w-[45vmin] sm:w-[40vmin] md:w-[35vmin] lg:w-[30vmin] h-auto"
+        style={{ containerType: 'inline-size' }}
+      >
+        <div className="relative w-full h-full flex items-center justify-center">
+          {/* Invisible placeholder to lock dimensions to the first frame so text doesn't jump */}
+          <img 
+            src={tornadoImages[0]} 
+            alt="" 
+            className="w-full h-auto opacity-0 pointer-events-none"
+          />
+
+          {/* Animated Tornado Image */}
+          <img 
+            src={tornadoImages[tornadoFrame]}
+            // src="/assets/HeroSection/SVG/tornado1.svg" 
+            alt="Tornado" 
+            className="absolute inset-0 w-full h-full object-contain"
+          />
+          
+          {/* Text Overlay */}
+          {/* ADJUST POSITION HERE: Change translate-y-[15%] (vertical) or add translate-x-[...] (horizontal) */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center translate-y-[-5%] text-[#F5F5DC] font-serif" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+            {/* Using cqw (Container Query Width) units locks text size to the container size */}
+            <span className="font-bold leading-none" style={{ fontFamily: 'Rye, serif', fontSize: '20cqw' }}>
+              {daysUntil > 0 ? daysUntil : 0}
+            </span>
+            {/* Adjust mt-[2%] to change spacing between the number and "DAYS UNTIL" */}
+            <span className="font-bold tracking-widest mt-[2%]" style={{ fontFamily: 'Rye, serif', fontSize: '4.8cqw' }}>
+              DAYS UNTIL
+            </span>
+            <span className="font-bold tracking-widest" style={{ fontFamily: 'Rye, serif', fontSize: '7cqw' }}>
+              CUHACKIT
+            </span>
+          </div>
+        </div>
+      </div>
 
       {/* Logo positioned in the hero section */}
       <div className="absolute z-30 top-40 align-top left-1/2 -translate-x-1/2 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-5xl">

@@ -1,4 +1,4 @@
-const TemplateSection = () => {
+const OrganizersSection = () => {
   const organizers = [
     { name: "Malia Fairbanks", role: "Co-Director", linkedin: "https://www.linkedin.com/in/malia-fairbanks/", image: "/assets/OrganizersSection/malia.svg" },
     { name: "Hazel Torek", role: "Co-Director", linkedin: "https://www.linkedin.com/in/hazel-torek/", image: "/assets/OrganizersSection/hazel.svg" },
@@ -49,4 +49,4 @@ const TemplateSection = () => {
   
 };
 
-export default TemplateSection;
+export default OrganizersSection;

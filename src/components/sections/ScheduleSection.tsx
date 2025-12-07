@@ -8,7 +8,7 @@ const ScheduleSection = () => {
         // style={{backgroundColor: '#ffffff'}}
 
         style={{
-          backgroundImage: "url('/assets/TemplateSchedule.svg')",
+          backgroundImage: "url('/assets/Photos.svg')",
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',

@@ -15,6 +15,7 @@ import OrganizersSection from '@/components/sections/OrganizersSection';
 // import { AboutPage } from '@/components/REFERENCE_about/AboutPage';
 // import { TracksPage } from '@/components/REFERENCE_tracks/TracksPage';
 import TemplateSection from '@/components/sections/TemplateSection';
+import MobileOrganizers from '@/components/sections/MobileOrganizers';
 
 const HORIZ_SCROLL_SPEED_MULTIPLIER = .5;
 
@@ -193,7 +194,7 @@ function Index() {
               ></img>
               
               <div id="organizers">
-                <OrganizersSection />
+                {isLargeScreen? <OrganizersSection /> : <MobileOrganizers />}
               </div>
               
               <img
