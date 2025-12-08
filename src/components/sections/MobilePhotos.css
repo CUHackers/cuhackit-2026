@@ -1,5 +1,5 @@
 .mobile-photos-container {
-  background-image: url('/assets/PhotosSection/PhotosBG.svg');
+  background-image: url('/src/assets/PhotosSection/PhotosBG.svg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

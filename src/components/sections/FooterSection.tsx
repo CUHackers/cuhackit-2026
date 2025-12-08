@@ -1,4 +1,7 @@
 import { Mail, Instagram, Linkedin } from 'lucide-react';
+import footerBg from '@/assets/FooterSection/Footer.png';
+import cuhackitLogo from '@/assets/FooterSection/CUhackitLogo.svg';
+import pawLogo from '@/assets/FooterSection/Paw_RGB__White.png';
 
 const TikTokIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
@@ -12,7 +15,7 @@ const FooterSection = () => {
       id="register" 
       className="relative py-16 border-t border-border/50"
       style={{
-        backgroundImage: "url('/assets/FooterSection/FooterBG.webp')",
+        backgroundImage: `url(${footerBg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -24,7 +27,7 @@ const FooterSection = () => {
           {/* Left Side - White Text */}
           <div className="text-white flex flex-col gap-2 items-center md:items-start text-center md:text-left">
             <img 
-              src="/assets/FooterSection/CUhackitLogo.svg" 
+              src={cuhackitLogo} 
               alt="CUhackit Logo" 
               className="h-16 w-auto mb-2"
             />
@@ -40,20 +43,20 @@ const FooterSection = () => {
               href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="font-bold underline hover:text-primary transition-colors text-3xl"
+              className="font-bold underline hover:text-white transition-colors text-3xl"
               style={{ fontFamily: 'Rye, serif' }}
             >
               MLH CODE OF CONDUCT
             </a>
             
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-black/10 border border-black/20 flex items-center justify-center hover:bg-black/20 transition-all duration-300 hover:scale-110 text-black">
+              <a href="https://www.tiktok.com/@cuhackit" className="w-10 h-10 rounded-full bg-black/10 border border-black/20 flex items-center justify-center hover:bg-black/20 transition-all duration-300 hover:scale-110 text-black">
                 <TikTokIcon className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-black/10 border border-black/20 flex items-center justify-center hover:bg-black/20 transition-all duration-300 hover:scale-110 text-black">
+              <a href="https://www.instagram.com/cuhackit" className="w-10 h-10 rounded-full bg-black/10 border border-black/20 flex items-center justify-center hover:bg-black/20 transition-all duration-300 hover:scale-110 text-black">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-black/10 border border-black/20 flex items-center justify-center hover:bg-black/20 transition-all duration-300 hover:scale-110 text-black">
+              <a href="https://www.linkedin.com/company/cuhackit/" className="w-10 h-10 rounded-full bg-black/10 border border-black/20 flex items-center justify-center hover:bg-black/20 transition-all duration-300 hover:scale-110 text-black">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
@@ -62,8 +65,14 @@ const FooterSection = () => {
             <p className="font-body text-lg">Made with love 💛</p>
           </div>
 
-          {/* Right Side - Empty for spacing to keep center centered */}
-          <div className="hidden md:block"></div>
+          {/* Right Side - Add Paw Image */}
+          <div className="hidden md:flex justify-end relative">
+            <img 
+              src={pawLogo} 
+              alt="Clemson Paw Logo" 
+              className="h-32 w-auto"
+            />
+          </div>
 
         </div>
       </div>

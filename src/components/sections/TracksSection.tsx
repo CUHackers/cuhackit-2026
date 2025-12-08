@@ -1,3 +1,4 @@
+import tracks from "@/assets/TracksSection.svg";
 
 const TracksSection = () => {
   
@@ -8,7 +9,7 @@ const TracksSection = () => {
       <div 
         className="relative w-full h-full overflow-hidden"
         style={{
-          backgroundImage: "url('/assets/TracksSection.svg')",
+          backgroundImage: `url(${tracks})`,
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',

@@ -21,6 +21,9 @@ import MobileOrganizers from '@/components/sections/MobileOrganizers';
 import MobileAboutSection from '@/components/sections/MobileAboutSection';
 import MobilePhotos from '@/components/sections/MobilePhotos';
 
+// Image Imports
+import pillarImg from '@/assets/Pillar.svg';
+
 const HORIZ_SCROLL_SPEED_MULTIPLIER = .5;
 
 // when to play the hinge animation on the about page
@@ -185,8 +188,9 @@ function Index() {
               
               <img
                 className="pillar1 hidden lg:block z-50"
-                src="/assets/Pillar.svg"
-              ></img>
+                src={pillarImg}
+                alt="Decorative Pillar"
+              />
               
               <div id='schedule'>
                 {isLargeScreen? <PhotosSection /> : <MobilePhotosSection />}
@@ -194,8 +198,9 @@ function Index() {
               
               <img
                 className="pillar1 hidden lg:block z-50"
-                src="/assets/Pillar.svg"
-              ></img>
+                src={pillarImg}
+                alt="Decorative Pillar"
+              />
               
               <div id="organizers">
                 {isLargeScreen? <OrganizersSection /> : <MobileOrganizers />}
@@ -203,8 +208,9 @@ function Index() {
               
               <img
                 className="pillar1 hidden lg:block z-50"
-                src="/assets/Pillar.svg"
-              ></img>
+                src={pillarImg}
+                alt="Decorative Pillar"
+              />
               {/* <div id="schedule"> */}
                 {/* Go back in an add in mobile pages */}
                 {/* {isLargeScreen? <TemplateScheduleSection /> : <TemplateScheduleSection />} */}
