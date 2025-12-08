@@ -1,6 +1,15 @@
 import { useState, useEffect } from 'react';
 import './hero.css';
 
+import tornado1 from "@/assets/HeroSection/tornado1.svg";
+import tornado2 from "@/assets/HeroSection/tornado2.svg";
+import tornado3 from "@/assets/HeroSection/tornado3.svg";
+import tornado4 from "@/assets/HeroSection/tornado4.svg";
+
+import townSkyNoCloud from "@/assets/TownSkyNoCloud.svg";
+import clouds from "@/assets/Clouds.svg";
+import logoNew from "@/assets/LogoNew.svg"
+
 const HeroSection = () => {
   // State for tornado animation frame
   const [tornadoFrame, setTornadoFrame] = useState(0);
@@ -9,10 +18,10 @@ const HeroSection = () => {
   // Adjust the array below with actual filenames found in assets/herosection
   const tornadoImages = [
     // '/src/assets/HeroSection/tornado0.svg',
-    '/src/assets/HeroSection/tornado1.svg',
-    '/src/assets/HeroSection/tornado2.svg',
-    '/src/assets/HeroSection/tornado3.svg',
-    '/src/assets/HeroSection/tornado4.svg',
+    tornado1,
+    tornado2,
+    tornado3,
+    tornado4
     // '/src/assets/HeroSection/tornado5.svg',
 
   ];
@@ -42,7 +51,7 @@ const HeroSection = () => {
           // Place the SVG on top and a vertical two-color background beneath it.
           // Top and bottom are solid colors with an abrupt split at 50% (no gradient blending)
           // backgroundImage: "url('/src/assets/TitleBackground.svg')",
-          backgroundImage: "url('/src/assets/TownSkyNoCloud.svg')", // Fix this later to have moving skys
+          backgroundImage: `url(${townSkyNoCloud})`, // Fix this later to have moving skys
           backgroundPosition: 'center center, center center',
           backgroundSize: 'cover, cover',
           backgroundRepeat: 'no-repeat, no-repeat',
@@ -55,15 +64,15 @@ const HeroSection = () => {
       <div className="hero-clouds h-80 portrait:top-[10%] md:h-56 lg:h-72 z-20">
         <div
           className="hero-clouds__layer hero-clouds__layer--slow"
-          style={{ backgroundImage: "url('/src/assets/Clouds.svg')" }}
+          style={{ backgroundImage: "url()" }}
         />
         <div
           className="hero-clouds__layer hero-clouds__layer--mid "
-          style={{ backgroundImage: "url('/src/assets/Clouds.svg')", top: '10%' }}
+          style={{ backgroundImage: `url(${clouds})`, top: '10%' }}
         />
         <div
           className="hero-clouds__layer hero-clouds__layer--fast"
-          style={{ backgroundImage: "url('/src/assets/Clouds.svg')", top: '20%' }}
+          style={{ backgroundImage: `url(${clouds})`, top: '20%' }}
         />
       </div>
 
@@ -113,7 +122,7 @@ const HeroSection = () => {
       {/* <div className="absolute z-30 top-40 align-top left-1/2 -translate-x-1/2 w-[90%] portrait:top-[37%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-5xl"> */}
         <img 
         // A/B test Logo2 and LogoNew
-          src="/src/assets/LogoNew.svg"  
+          src={logoNew}
           alt="CUhackit '26 Logo" 
           className="w-full h-auto"
         />

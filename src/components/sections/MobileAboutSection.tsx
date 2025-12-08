@@ -1,3 +1,5 @@
+import mAboutBg from "@/assets/AboutSection/mAboutBG.svg";
+
 const AboutSection = () => {
   return (
     <section>
@@ -5,7 +7,7 @@ const AboutSection = () => {
         <div className="relative w-full h-full overflow-hidden">
           {/* Background as an <img> so overlays keep consistent relative positioning */}
           <img
-            src="/src/assets/AboutSection/mAboutBG.svg"
+            src={mAboutBg}
             alt="About background"
             className="absolute inset-0 w-full h-full object-cover object-center"
             aria-hidden

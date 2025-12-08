@@ -1,3 +1,6 @@
+import bg from "@/assets/PhotosSection/PhotosBG.svg";
+import photos from "@/assets/PhotosSection/Photos.webp";
+
 const PhotosSection = () => {
   
   return (
@@ -7,7 +10,7 @@ const PhotosSection = () => {
         // style={{backgroundColor: '#ffffff'}}
 
         style={{
-          backgroundImage: "url('/src/assets/PhotosSection/PhotosBG.svg')",
+          backgroundImage: `url(${bg})`,
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
@@ -15,7 +18,7 @@ const PhotosSection = () => {
       >
         {/* Photos image with relative sizing (percentage based) */}
         <img 
-          src="/src/assets/PhotosSection/Photos.Webp" 
+          src={photos} 
           alt="Event Photos" 
           className="relative h-[100%] right-[-8%] bottom-[4%]  w-auto object-contain"
         />

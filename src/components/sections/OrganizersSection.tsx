@@ -1,12 +1,22 @@
+import malia from "@/assets/OrganizersSection/malia.svg";
+import hazel from "@/assets/OrganizersSection/hazel.svg";
+import uzayr from "@/assets/OrganizersSection/uzayr.svg";
+import chris from "@/assets/OrganizersSection/christina.svg";
+import varun from "@/assets/OrganizersSection/varun.svg";
+import keely from "@/assets/OrganizersSection/keely.svg";
+import mia from "@/assets/OrganizersSection/mia.svg";
+import li from "@/assets/OrganizersSection/LI-In-Bug.png";
+import bg from "@/assets/OrganizersSection/OrganizersBG.svg";
+
 const OrganizersSection = () => {
   const organizers = [
-    { name: "Malia Fairbanks", role: "Co-Director", linkedin: "https://www.linkedin.com/in/malia-fairbanks/", image: "/src/assets/OrganizersSection/malia.svg" },
-    { name: "Hazel Torek", role: "Co-Director", linkedin: "https://www.linkedin.com/in/hazel-torek/", image: "/src/assets/OrganizersSection/hazel.svg" },
-    { name: "Uzayr Syed", role: "Finance", linkedin: "https://www.linkedin.com/in/uzayrsyed/", image: "/src/assets/OrganizersSection/uzayr.svg" },
-    { name: "Christina Foley", role: "Logistics", linkedin: "https://www.linkedin.com/in/christina-foley/", image: "/src/assets/OrganizersSection/christina.svg" },
-    { name: "Varun Sethi", role: "Partnership", linkedin: "https://www.linkedin.com/in/vsethi-in/", image: "/src/assets/OrganizersSection/varun.svg" },
-    { name: "Keely Hong", role: "Partnership/PR", linkedin: "https://www.linkedin.com/in/keelyhong/", image: "/src/assets/OrganizersSection/keely.svg" },
-    { name: "Mia Yancey", role: "Design", linkedin: "https://www.linkedin.com/in/mia-yancey/", image: "/src/assets/OrganizersSection/mia.svg" },
+    { name: "Malia Fairbanks", role: "Co-Director", linkedin: "https://www.linkedin.com/in/malia-fairbanks/", image: malia },
+    { name: "Hazel Torek", role: "Co-Director", linkedin: "https://www.linkedin.com/in/hazel-torek/", image: hazel },
+    { name: "Uzayr Syed", role: "Finance", linkedin: "https://www.linkedin.com/in/uzayrsyed/", image: uzayr },
+    { name: "Christina Foley", role: "Logistics", linkedin: "https://www.linkedin.com/in/christina-foley/", image: chris },
+    { name: "Varun Sethi", role: "Partnership", linkedin: "https://www.linkedin.com/in/vsethi-in/", image: varun },
+    { name: "Keely Hong", role: "Partnership/PR", linkedin: "https://www.linkedin.com/in/keelyhong/", image: keely },
+    { name: "Mia Yancey", role: "Design", linkedin: "https://www.linkedin.com/in/mia-yancey/", image: mia },
   ];
   
   return (
@@ -14,7 +24,7 @@ const OrganizersSection = () => {
       <div 
         className="relative w-full h-full overflow-hidden flex items-center justify-center"
         style={{
-          backgroundImage: "url('/src/assets/OrganizersSection/OrganizersBG.svg')",
+          backgroundImage: `url(${bg})`,
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
@@ -35,7 +45,7 @@ const OrganizersSection = () => {
                 className="absolute bottom-[7%] right-[7%] w-[10%] hover:scale-110 transition-transform duration-200"
               >
                 <img
-                  src="/src/assets/OrganizersSection/LI-In-Bug.png"
+                  src={li}
                   alt="LinkedIn"
                   className="w-full h-auto object-contain"
                 />
