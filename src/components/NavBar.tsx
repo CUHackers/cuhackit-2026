@@ -41,8 +41,8 @@ const NavBar: React.FC<NavBarProps> = ({ isLargeScreen, scrollToSection }) => {
             <button className="nav-button" onClick={() => scrollToSection('about')}>
               ABOUT
             </button>
-            <button className="nav-button" onClick={() => scrollToSection('schedule')}>
-              SCHEDULE
+            <button className="nav-button" onClick={() => scrollToSection('tracks')}>
+              TRACKS
             </button>
             <button className="nav-button" onClick={() => scrollToSection('faq')}>
               FAQ 
@@ -66,8 +66,8 @@ const NavBar: React.FC<NavBarProps> = ({ isLargeScreen, scrollToSection }) => {
           <button className="nav-button" onClick={() => { scrollToSection('about'); setIsMenuOpen(false); }}>
             ABOUT
           </button>
-          <button className="nav-button" onClick={() => { scrollToSection('schedule'); setIsMenuOpen(false); }}>
-            SCHEDULE
+          <button className="nav-button" onClick={() => { scrollToSection('tracks'); setIsMenuOpen(false); }}>
+            TRACKS
           </button>
           <button className="nav-button" onClick={() => { scrollToSection('faq'); setIsMenuOpen(false); }}>
             FAQ 
