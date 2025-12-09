@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { ChevronDown } from 'lucide-react'; // Import ChevronDown
 import './hero.css';
 
 import tornado1 from "@/assets/HeroSection/tornado1.svg";
@@ -44,6 +45,21 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ backgroundColor: '#a8c2ff' }}>
+      <style>{`
+        @keyframes bounce-subtle {
+          0%, 100% {
+            transform: translateY(-15%);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+          }
+          50% {
+            transform: translateY(0);
+            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+          }
+        }
+        .animate-bounce-subtle {
+          animation: bounce-subtle 2s infinite;
+        }
+      `}</style>
       {/* Background image (TitleBackground.svg) - center and fill the screen */}
       <div
         className="absolute inset-0 z-0"
@@ -128,6 +144,26 @@ const HeroSection = () => {
         />
       </div>
 
+      {/* Scroll Down Indicator */}
+      <div className="absolute bottom-[4vh] left-1/2 -translate-x-1/2 z-30 text-[#F5F5DC] opacity-80">
+        <div className="animate-bounce-subtle flex flex-col items-center">
+          <span 
+            className="font-bold tracking-widest mb-[0.5vh]" 
+            style={{ 
+              fontFamily: 'Rye, serif', 
+              textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
+              fontSize: 'clamp(0.8rem, 1.5vw, 1.2rem)'
+            }}
+          >
+            SCROLL
+          </span>
+          <ChevronDown 
+            strokeWidth={3} 
+            className="w-[6vw] h-[6vw] min-w-[24px] min-h-[24px] max-w-[40px] max-h-[40px]"
+            style={{ filter: 'drop-shadow(1px 1px 2px rgba(0,0,0,0.5))' }} 
+          />
+        </div>
+      </div>
   
     </section>
   );

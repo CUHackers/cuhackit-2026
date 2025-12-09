@@ -45,7 +45,7 @@ const faqData: FAQItem[] = [
     answer: "CUhackit 2026 is free to all participants. This includes admission, food, mentoring, workshops, resources, and merch!"
   },
   {
-    question: "Still have questiosns?",
+    question: "Still have questions?",
     answer: (
       <span>
         We'd love to help! Reach out to us at{' '}
