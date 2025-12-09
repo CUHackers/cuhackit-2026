@@ -176,7 +176,7 @@ function Index() {
       {/* Loading Screen - Matches Navbar/Background */}
       {isLoading && (
         <div className="fixed inset-0 z-[9999] bg-[#106f57] w-screen h-screen flex items-center justify-center">
-          <h1 className="text-6xl md:text-8xl text-white font-western animate-pulse tracking-widest">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl text-white font-western animate-pulse tracking-widest text-center px-4">
             LOADING...
           </h1>
         </div>
