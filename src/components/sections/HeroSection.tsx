@@ -134,14 +134,28 @@ const HeroSection = () => {
       </div>
 
       {/* Logo positioned in the hero section */}
-      <div className="absolute z-30 top-40 align-top left-1/2 -translate-x-1/2 w-[90%] portrait:top-[20%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-5xl">
+      <div className="absolute z-30 top-40 align-top left-1/2 -translate-x-1/2 w-[90%] portrait:top-[20%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-5xl flex flex-col items-center">
       {/* <div className="absolute z-30 top-40 align-top left-1/2 -translate-x-1/2 w-[90%] portrait:top-[37%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-5xl"> */}
         <img 
         // A/B test Logo2 and LogoNew
           src={logoNew}
           alt="CUhackit '26 Logo" 
-          className="w-full h-auto"
+          className="w-full h-auto mb-8"
         />
+        <a 
+          href="https://whova.com/portal/registration/GOXMM8ga7xJWgdvLdCHc/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-4 py-2 md:px-8 md:py-4 rounded-xl md:rounded-2xl text-xl md:text-3xl shadow-lg hover:scale-105 transition-transform duration-100"
+          style={{ 
+            backgroundColor: '#f8ba2a', 
+            color: '#ffffff',
+            fontFamily: 'Rye, serif',
+            border: '4px solid #dda628'
+          }}
+        >
+          REGISTER NOW!
+        </a>
       </div>
 
       {/* Scroll Down Indicator */}

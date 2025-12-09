@@ -26,7 +26,7 @@ const AboutSection = () => {
             <div className="absolute inset-0 flex items-start justify-center pt-[25%] px-[14%] pb-[10%] pointer-events-none">
               <div className="max-w-full text-wrap">
                 <p className="text-left text-black font-bold leading-tight" style={{ fontSize: '3.5vmin' }}>
-                  Join us for a day of building, learning, and fun at South Carolina’s premiere hackathon! Spend 24 hours coding and collaborating in the beautiful Watt Family Innovation Center at Clemson University while we handle the food, coffee, and snacks. No matter your major or level of experience, we want to see you create your next hack with us at CUhackit! CUhackit is dedicated to fostering an inclusive and respectful environment for all participants.
+                  Join us for a day of building, learning, and fun at South Carolina’s largest annual hackathon! Spend 24 hours coding and collaborating in the beautiful Wilbur O. and Ann Powers College of Business at Clemson University while we handle the food, coffee, and snacks. No matter your major or level of experience, we want to see you create your next hack with us at CUhackit! 
                 </p>
                 <br />
                 <p className="text-left text-black font-bold leading-tight" style={{ fontSize: '3.5vmin' }}>
