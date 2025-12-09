@@ -3,7 +3,7 @@ import sponsorsBg from '@/assets/Sponsors.svg';
 
 const TemplateSection = () => {
   return (
-    <div className="snap-start w-screen h-screen">
+    <div className="snap-start w-full h-screen">
       <div 
         className="relative w-full h-full overflow-hidden flex items-center justify-center"
         style={{
@@ -19,7 +19,13 @@ const TemplateSection = () => {
           letterSpacing: '0.02em'
         }}
       >
-        <h1 className="text-center mb-12 text-5xl md:text-6xl lg:text-6xl">
+        <h1 
+          className="text-center mb-12 w-full px-4"
+          style={{
+            fontSize: 'clamp(2rem, 6vw, 5rem)',
+            lineHeight: 1.1
+          }}
+        >
           ANNOUNCING SPONSORS SOON!
         </h1>
       </div>
