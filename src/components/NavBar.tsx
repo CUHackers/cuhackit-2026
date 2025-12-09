@@ -47,9 +47,14 @@ const NavBar: React.FC<NavBarProps> = ({ isLargeScreen, scrollToSection }) => {
             <button className="nav-button" onClick={() => scrollToSection('faq')}>
               FAQ 
             </button>
-            <button className="nav-button" onClick={() => scrollToSection('register')}>
+            <a 
+              className="nav-button" 
+              href="https://whova.com/portal/registration/GOXMM8ga7xJWgdvLdCHc/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               REGISTER
-            </button>
+            </a>
 
           </div>
 
@@ -72,9 +77,15 @@ const NavBar: React.FC<NavBarProps> = ({ isLargeScreen, scrollToSection }) => {
           <button className="nav-button" onClick={() => { scrollToSection('faq'); setIsMenuOpen(false); }}>
             FAQ 
           </button>
-          <button className="nav-button" onClick={() => { scrollToSection('register'); setIsMenuOpen(false); }}>
+          <a 
+            className="nav-button" 
+            href="https://whova.com/portal/registration/GOXMM8ga7xJWgdvLdCHc/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsMenuOpen(false)}
+          >
             REGISTER
-          </button>
+          </a>
         </div>
       )}
     </>

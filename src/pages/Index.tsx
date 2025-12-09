@@ -27,20 +27,6 @@ import pillarImg from '@/assets/Pillar.svg';
 
 const HORIZ_SCROLL_SPEED_MULTIPLIER = .5;
 
-// Inline SVG Component for CUhackit Logo
-// TODO: Open src/assets/FooterSection/CUhackitLogo.svg, copy the viewBox and paths, and update this component.
-const CUhackitLogo = ({ className }: { className?: string }) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 100 100" // TODO: Replace with your SVG's viewBox
-    className={className}
-    fill="currentColor"
-  >
-    {/* TODO: Replace with your SVG's paths */}
-    <path d="M50 0 L100 100 L0 100 Z" />
-  </svg>
-);
-
 // when to play the hinge animation on the about page
 const ABOUT_PAGE_HINGE_ANIMATION_THRESHOLD = window.innerHeight * 0.5;
 
@@ -190,9 +176,9 @@ function Index() {
       {/* Loading Screen - Matches Navbar/Background */}
       {isLoading && (
         <div className="fixed inset-0 z-[9999] bg-[#106f57] w-screen h-screen flex items-center justify-center">
-          <CUhackitLogo 
-            className="w-48 h-auto animate-pulse text-white" 
-          />
+          <h1 className="text-6xl md:text-8xl text-white font-western animate-pulse tracking-widest">
+            LOADING...
+          </h1>
         </div>
       )}
 
