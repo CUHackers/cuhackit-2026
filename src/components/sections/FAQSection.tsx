@@ -45,7 +45,7 @@ const faqData: FAQItem[] = [
     answer: "CUhackit 2026 is free to all participants. This includes admission, food, mentoring, workshops, resources, and merch!"
   },
   {
-    question: "Still have questiosns?",
+    question: "Still have questions?",
     answer: (
       <span>
         We'd love to help! Reach out to us at{' '}
@@ -69,18 +69,20 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="snap-start w-screen min-h-screen py-32 px-4" id="faq" style={{ backgroundColor: '#fef7dd' }}>
-      <div className="max-w-4xl mx-auto">
+    <div className="snap-start w-full min-h-screen py-32 px-4" id="faq" style={{ backgroundColor: '#fef7dd' }}>
+      <div className="max-w-4xl mx-auto w-full">
         {/* Title */}
         <h2 
-          className="text-center mb-12 text-5xl md:text-6xl lg:text-6xl"
+          className="text-center mb-12 w-full"
           style={{
+            fontSize: 'clamp(2.5rem, 9vw, 5rem)', // Responsive size with min/max limits
             fontFamily: '"brim-narrow-combined-2", sans-serif',
             fontWeight: 400,
             color: '#9e8564',
             // WebkitTextStroke: '1.0px #000000',
             textShadow: '0 0 8px rgba(0, 0, 0, 0.3)',
-            letterSpacing: '0.02em'
+            letterSpacing: '0.02em',
+            lineHeight: 1.1
           }}
         >
           FREQUENTLY ASKED<br />QUESTIONS

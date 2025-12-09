@@ -50,7 +50,7 @@ const FooterSection = () => {
             </a>
             
             <div className="flex gap-4">
-              <a href="https://www.tiktok.com/@cuhackit" className="w-10 h-10 rounded-full bg-black/10 border border-black/20 flex items-center justify-center hover:bg-black/20 transition-all duration-300 hover:scale-110 text-black">
+              <a href="https://www.tiktok.com/@cu_hackit" className="w-10 h-10 rounded-full bg-black/10 border border-black/20 flex items-center justify-center hover:bg-black/20 transition-all duration-300 hover:scale-110 text-black">
                 <TikTokIcon className="w-5 h-5" />
               </a>
               <a href="https://www.instagram.com/cuhackit" className="w-10 h-10 rounded-full bg-black/10 border border-black/20 flex items-center justify-center hover:bg-black/20 transition-all duration-300 hover:scale-110 text-black">
@@ -62,7 +62,7 @@ const FooterSection = () => {
             </div>
 
             <p className="font-body font-semibold text-lg">Clemson University, Clemson, SC</p>
-            <p className="font-body text-lg">Made with love 💛</p>
+            <p className="font-body text-lg">Made with good vibes 😎</p>
           </div>
 
           {/* Right Side - Add Paw Image */}

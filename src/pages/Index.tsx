@@ -23,6 +23,7 @@ import MobilePhotos from '@/components/sections/MobilePhotos';
 
 // Image Imports
 import pillarImg from '@/assets/Pillar.svg';
+// import cuhackitLogo from '@/assets/FooterSection/CUhackitLogo.svg'; // Replaced by inline component
 
 const HORIZ_SCROLL_SPEED_MULTIPLIER = .5;
 
@@ -33,6 +34,7 @@ function Index() {
 
   // Using code from hackgt12-website for horizontal scrolling logic
   const [showDoors, setShowDoors] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -44,6 +46,21 @@ function Index() {
  
   const [isLargeScreen, setIsLargeScreen] = useState(false);
   
+  useEffect(() => {
+    // Wait for all resources (images, etc.) to fully load
+    const handleLoad = () => {
+      // Add a 1 second delay before hiding loading screen and showing doors
+      setTimeout(() => setIsLoading(false), 3000);
+    };
+    
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
+    return () => window.removeEventListener("load", handleLoad);
+  }, []);
+
   useEffect(() => {
     const checkScreenSize = () => {
       setIsLargeScreen(window.innerWidth >= 1024);
@@ -132,12 +149,6 @@ function Index() {
       case "about":
         targetPercent = 0; // First section (0%)
         break;
-      case "tracks":
-        targetPercent = 0.5; // Middle section (50%)
-        break;
-      case "schedule":
-        targetPercent = 0.5; // Last section (100%)
-        break;
       default: {
         // For FAQ and Sponsors, scroll to the vertical section
         const element = document.getElementById(sectionId);
@@ -162,7 +173,18 @@ function Index() {
 
   return (
     <>
-      {showDoors && <SaloonDoors onComplete={() => setShowDoors(false)} lifeAfterAnimationMs={100} />}
+      {/* Loading Screen - Matches Navbar/Background */}
+      {isLoading && (
+        <div className="fixed inset-0 z-[9999] bg-[#106f57] w-screen h-screen flex items-center justify-center">
+          <h1 className="text-6xl md:text-8xl text-white font-western animate-pulse tracking-widest">
+            LOADING...
+          </h1>
+        </div>
+      )}
+
+      {/* Doors only appear and animate after loading is complete */}
+      {!isLoading && showDoors && <SaloonDoors onComplete={() => setShowDoors(false)} lifeAfterAnimationMs={100} />}
+      
       <NavBar isLargeScreen={isLargeScreen} scrollToSection={scrollToSection} />
       
       <div className="min-h-screen bg-background">
@@ -211,19 +233,6 @@ function Index() {
                 src={pillarImg}
                 alt="Decorative Pillar"
               />
-              {/* <div id="schedule"> */}
-                {/* Go back in an add in mobile pages */}
-                {/* {isLargeScreen? <TemplateScheduleSection /> : <TemplateScheduleSection />} */}
-              {/* </div> */}
-
-              {/* <img
-                className="pillar2 hidden lg:block"
-                src="/about/about_pillar.webp"
-              ></img> */}
-
-              {/* <div id="room"> */}
-                {/* {isLargeScreen? <TemplateScheduleSection /> : <TemplateScheduleSection />} */}
-              {/* </div> */}
              </div>
 
             {/* <img
@@ -233,8 +242,12 @@ function Index() {
             /> */}
           </div>
         </section>
+        <div id="tracks">
         <TracksSection />
-        <FAQSection />
+        </div>
+        <div id="faq" >
+          <FAQSection />
+        </div>
         <SponsorsSection />
         <FooterSection />
       </div>
