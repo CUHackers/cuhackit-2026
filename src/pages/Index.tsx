@@ -1,25 +1,24 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, lazy, Suspense } from 'react';
 
 import SaloonDoors from '@/components/SaloonDoorsFixed';
 import NavBar from '@/components/NavBar';
 
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
-import PhotosSection from '@/components/sections/PhotosSection';
-import MobilePhotosSection from '@/components/sections/MobilePhotos';
-import SponsorsSection from '@/components/sections/SponsorsSection';
-import FAQSection from '@/components/sections/FAQSection';
-import FooterSection from '@/components/sections/FooterSection';
-import OrganizersSection from '@/components/sections/OrganizersSection';
-import TracksSection from '@/components/sections/TracksSection';
+const PhotosSection = lazy(() => import("@/components/sections/PhotosSection"));
+// import PhotosSection from '';
+const MobilePhotosSection = lazy(() => import("@/components/sections/MobilePhotos"));
+const SponsorsSection = lazy(() => import('@/components/sections/SponsorsSection'));
+const FAQSection = lazy(() => import('@/components/sections/FAQSection'));
+const FooterSection = lazy(() => import('@/components/sections/FooterSection'));
+const OrganizersSection = lazy(() => import('@/components/sections/OrganizersSection'));
+const TracksSection = lazy(() => import('@/components/sections/TracksSection'));
+const MobileOrganizers = lazy(() => import('@/components/sections/MobileOrganizers'));
 
 // Messing with some stuff
 // import { AboutPage } from '@/components/REFERENCE_about/AboutPage';
 // import { TracksPage } from '@/components/REFERENCE_tracks/TracksPage';
-import TemplateSection from '@/components/sections/TemplateSection';
-import MobileOrganizers from '@/components/sections/MobileOrganizers';
 import MobileAboutSection from '@/components/sections/MobileAboutSection';
-import MobilePhotos from '@/components/sections/MobilePhotos';
 
 // Image Imports
 import pillarImg from '@/assets/Pillar.svg';
@@ -50,7 +49,7 @@ function Index() {
     // Wait for all resources (images, etc.) to fully load
     const handleLoad = () => {
       // Add a 1 second delay before hiding loading screen and showing doors
-      setTimeout(() => setIsLoading(false), 3000);
+      setTimeout(() => setIsLoading(false), 0);
     };
     
     if (document.readyState === "complete") {
@@ -215,7 +214,9 @@ function Index() {
               />
               
               <div id='schedule'>
-                {isLargeScreen? <PhotosSection /> : <MobilePhotosSection />}
+                <Suspense fallback={<div className="w-full h-full flex items-center justify-center text-white">Loading...</div>}>
+                  {isLargeScreen? <PhotosSection /> : <MobilePhotosSection />}
+                </Suspense>
               </div>
               
               <img
@@ -225,7 +226,9 @@ function Index() {
               />
               
               <div id="organizers">
-                {isLargeScreen? <OrganizersSection /> : <MobileOrganizers />}
+                <Suspense fallback={<div className="w-full h-full flex items-center justify-center text-white">Loading...</div>}>
+                  {isLargeScreen? <OrganizersSection /> : <MobileOrganizers />}
+                </Suspense>
               </div>
               
               <img
@@ -243,13 +246,19 @@ function Index() {
           </div>
         </section>
         <div id="tracks">
-        <TracksSection />
+          <Suspense fallback={null}>
+            <TracksSection />
+          </Suspense>
         </div>
         <div id="faq" >
-          <FAQSection />
+          <Suspense fallback={null}>
+            <FAQSection />
+          </Suspense>
         </div>
-        <SponsorsSection />
-        <FooterSection />
+        <Suspense fallback={null}>
+          <SponsorsSection />
+          <FooterSection />
+        </Suspense>
       </div>
     </>
   );

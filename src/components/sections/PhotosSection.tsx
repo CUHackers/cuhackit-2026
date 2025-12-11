@@ -21,6 +21,7 @@ const PhotosSection = () => {
           src={photos} 
           alt="Event Photos" 
           className="relative h-[100%] right-[-8%] bottom-[4%]  w-auto object-contain"
+          loading="lazy"
         />
       </div>
     </div>

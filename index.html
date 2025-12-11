@@ -17,10 +17,22 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="ogimage.png" />
 
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Performance Logger: Check console for load time -->
+    <script>
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const timing = window.performance.timing;
+          const loadTime = timing.loadEventEnd - timing.navigationStart;
+          console.log(`Page Load Time: ${loadTime}ms`);
+        }, 0);
+      });
+    </script>
   </body>
 </html>
