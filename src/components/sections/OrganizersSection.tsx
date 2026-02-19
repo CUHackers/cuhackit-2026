@@ -9,12 +9,12 @@ const OrganizersSection = () => {
         className="relative w-full h-full overflow-hidden flex items-center justify-center"
         style={{
           backgroundImage: `url(${bg})`,
-          backgroundPosition: 'center center',
+          backgroundPosition: '15% center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className="grid grid-cols-4 gap-[2vw] w-[48%] translate-x-[12vw] translate-y-[-10vh]">
+        <div className="grid grid-cols-4 gap-[2vw] w-[48%] translate-x-[20vw] translate-y-[-10vh]">
           {organizers.map((organizer, index) => (
             <div key={index} className="relative">
               <img 

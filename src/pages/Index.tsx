@@ -14,6 +14,7 @@ const FooterSection = lazy(() => import('@/components/sections/FooterSection'));
 const OrganizersSection = lazy(() => import('@/components/sections/OrganizersSection'));
 const TracksSection = lazy(() => import('@/components/sections/TracksSection'));
 const MobileOrganizers = lazy(() => import('@/components/sections/MobileOrganizers'));
+const MobileScheduleSection = lazy(() => import('@/components/sections/MobileScheduleSection'));
 
 // Messing with some stuff
 // import { AboutPage } from '@/components/REFERENCE_about/AboutPage';
@@ -22,6 +23,7 @@ import MobileAboutSection from '@/components/sections/MobileAboutSection';
 
 // Image Imports
 import pillarImg from '@/assets/Pillar.svg';
+import ScheduleSection from '@/components/sections/ScheduleSection';
 // import cuhackitLogo from '@/assets/FooterSection/CUhackitLogo.svg'; // Replaced by inline component
 
 const HORIZ_SCROLL_SPEED_MULTIPLIER = .5;
@@ -213,7 +215,7 @@ function Index() {
                 alt="Decorative Pillar"
               />
               
-              <div id='schedule'>
+              <div id='photos'>
                 <Suspense fallback={<div className="w-full h-full flex items-center justify-center text-white">Loading...</div>}>
                   {isLargeScreen? <PhotosSection /> : <MobilePhotosSection />}
                 </Suspense>
@@ -245,11 +247,20 @@ function Index() {
             /> */}
           </div>
         </section>
+        
+        <div id="schedule">
+          <Suspense fallback={null}>
+            {isLargeScreen? <ScheduleSection /> : <MobileScheduleSection />}
+          </Suspense>
+        </div>
+
+
         <div id="tracks">
           <Suspense fallback={null}>
             <TracksSection />
           </Suspense>
         </div>
+
         <div id="faq" >
           <Suspense fallback={null}>
             <FAQSection />
