@@ -16,6 +16,7 @@ const TracksSection = lazy(() => import('@/components/sections/TracksSection'));
 const MobileOrganizers = lazy(() => import('@/components/sections/MobileOrganizers'));
 const MobileScheduleSection = lazy(() => import('@/components/sections/MobileScheduleSection'));
 
+
 // Messing with some stuff
 // import { AboutPage } from '@/components/REFERENCE_about/AboutPage';
 // import { TracksPage } from '@/components/REFERENCE_tracks/TracksPage';
@@ -24,6 +25,7 @@ import MobileAboutSection from '@/components/sections/MobileAboutSection';
 // Image Imports
 import pillarImg from '@/assets/Pillar.svg';
 import ScheduleSection from '@/components/sections/ScheduleSection';
+import MobileSponsors from '@/components/sections/MobileSponsorsSection';
 // import cuhackitLogo from '@/assets/FooterSection/CUhackitLogo.svg'; // Replaced by inline component
 
 const HORIZ_SCROLL_SPEED_MULTIPLIER = .5;
@@ -267,7 +269,7 @@ function Index() {
           </Suspense>
         </div>
         <Suspense fallback={null}>
-          <SponsorsSection />
+          {isLargeScreen ? <SponsorsSection /> : <MobileSponsors />}
           <FooterSection />
         </Suspense>
       </div>

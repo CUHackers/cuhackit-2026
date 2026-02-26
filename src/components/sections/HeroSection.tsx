@@ -37,11 +37,40 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, [tornadoImages.length]);
 
-  // Calculate days until CUhackit (Example date: Jan 25, 2025 - adjust as needed)
-  const targetDate = new Date('2026-02-27T00:00:00');
-  const today = new Date();
-  const timeDiff = targetDate.getTime() - today.getTime();
-  const daysUntil = Math.ceil(timeDiff / (1000 * 3600 * 24));
+  // Countdown timer state
+  const [timeLeft, setTimeLeft] = useState<{ hours: number; minutes: number; seconds: number } | null>(null);
+
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const targetDate = new Date('2026-02-27T18:00:00-05:00'); // 6:00 PM EST
+      const now = new Date();
+      const difference = targetDate.getTime() - now.getTime();
+
+      if (difference <= 0) {
+        return { hours: 0, minutes: 0, seconds: 0 };
+      }
+
+      const hours = Math.floor(difference / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      return { hours, minutes, seconds };
+    };
+
+    // Initial calculation
+    setTimeLeft(calculateTimeLeft());
+
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  // Format time as HH:MM:SS
+  const formattedTime = timeLeft 
+    ? `${String(timeLeft.hours).padStart(2, '0')}:${String(timeLeft.minutes).padStart(2, '0')}:${String(timeLeft.seconds).padStart(2, '0')}`
+    : "00:00:00";
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ backgroundColor: '#a8c2ff' }}>
@@ -119,12 +148,12 @@ const HeroSection = () => {
           {/* ADJUST POSITION HERE: Change translate-y-[15%] (vertical) or add translate-x-[...] (horizontal) */}
           <div className="absolute inset-0 flex flex-col items-center justify-center translate-y-[-5%] text-[#F5F5DC] font-serif" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
             {/* Using cqw (Container Query Width) units locks text size to the container size */}
-            <span className="font-bold leading-none" style={{ fontFamily: 'Rye, serif', fontSize: '20cqw' }}>
-              {daysUntil > 0 ? daysUntil : 0}
+            <span className="font-bold leading-none text-center" style={{ fontFamily: 'Rye, serif', fontSize: '14cqw' }}>
+              {formattedTime}
             </span>
             {/* Adjust mt-[2%] to change spacing between the number and "DAYS UNTIL" */}
             <span className="font-bold tracking-widest mt-[2%]" style={{ fontFamily: 'Rye, serif', fontSize: '4.8cqw' }}>
-              DAYS UNTIL
+              TIME UNTIL
             </span>
             <span className="font-bold tracking-widest" style={{ fontFamily: 'Rye, serif', fontSize: '7cqw' }}>
               CUHACKIT
@@ -143,10 +172,10 @@ const HeroSection = () => {
           className="w-full h-auto mb-8"
         />
         <a 
-          href="https://whova.com/portal/registration/GOXMM8ga7xJWgdvLdCHc/"
+          href="https://whova.com/portal/QqWr2JuyrJTkv4YVVe2hKJ26TuRiyMejtO4%405fU8wyM%3D/?source=btn_link"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-4 py-2 md:px-8 md:py-4 rounded-xl md:rounded-2xl text-xl md:text-3xl shadow-lg hover:scale-105 transition-transform duration-100"
+          className="px-4 py-2 md:px-8 md:py-4 rounded-xl md:rounded-2xl text-lg md:text-2xl shadow-lg hover:scale-105 transition-transform duration-100 text-center"
           style={{ 
             backgroundColor: '#f8ba2a', 
             color: '#ffffff',
@@ -154,7 +183,7 @@ const HeroSection = () => {
             border: '4px solid #dda628'
           }}
         >
-          REGISTER NOW!
+          CUHACKIT EVENT APP
         </a>
       </div>
 

@@ -1,5 +1,5 @@
 import '../../styles/global.css';
-import sponsorsBg from '@/assets/Sponsors.svg';
+import sponsorsBg from '@/assets/SponsorsSection/Sponsors.webp';
 
 const TemplateSection = () => {
   return (
@@ -19,15 +19,7 @@ const TemplateSection = () => {
           letterSpacing: '0.02em'
         }}
       >
-        <h1 
-          className="text-center mb-12 w-full px-4"
-          style={{
-            fontSize: 'clamp(2rem, 6vw, 5rem)',
-            lineHeight: 1.1
-          }}
-        >
-          ANNOUNCING SPONSORS SOON!
-        </h1>
+        
       </div>
     </div>
   );
